@@ -24,16 +24,16 @@ namespace ui
         private loadForm loadform;
         public cheatForm cheatform;
         private cheatsearchForm cheatsearchform;
-        private ipsForm ipsform;        
+        //private ipsForm ipsform;        
         public m68000Form m68000form;
         public z80Form z80form;
-        public m6809Form m6809form;
+        //public m6809Form m6809form;
         public cpsForm cpsform;
         public neogeoForm neogeoform;
         public namcos1Form namcos1form;
-        public pgmForm pgmform;
-        public m72Form m72form;
-        public m92Form m92form;
+        //public pgmForm pgmform;
+        //public m72Form m72form;
+        //public m92Form m92form;
         public string sSelect;
         private DSDevice dev;
         private BufferDescription desc1;
@@ -111,7 +111,7 @@ namespace ui
 
             //InitCheatForm();
             //InitCheatsearchForm();
-            InitIpsForm();
+            //InitIpsForm();
             InitM68000Form();
             InitZ80Form();
             //InitM6809Form();
@@ -166,7 +166,7 @@ namespace ui
                     CPS.CPSInit();
                     CPS.GDIInit();
                     break;
-                case "Neo Geo":
+                /*case "Neo Geo":
                     Video.nMode = 1;
                     itemSize = new ToolStripMenuItem[Video.nMode];
                     for (i = 0; i < Video.nMode; i++)
@@ -272,7 +272,7 @@ namespace ui
                     m92ToolStripMenuItem.Enabled = true;
                     M92.M92Init();
                     M92.GDIInit();
-                    break;
+                    break;*/
             }
             if (Machine.bRom)
             {                
@@ -322,7 +322,7 @@ namespace ui
         }
         private void InitIpsForm()
         {
-            ipsform = new ipsForm(this);
+            /*ipsform = new ipsForm(this);
             foreach (string sFile in Directory.GetFiles("ips"))
             {
                 if (Path.GetExtension(sFile).ToLower() == ".cht")
@@ -333,7 +333,7 @@ namespace ui
             if (ipsform.cbCht.Items.Count > 0)
             {
                 ipsform.cbCht.SelectedIndex = 0;
-            }
+            }*/
         }
         private void InitCheatsearchForm()
         {
@@ -349,7 +349,7 @@ namespace ui
         }
         private void InitM6809Form()
         {
-            m6809form = new m6809Form(this);
+            //m6809form = new m6809Form(this);
         }
         private void InitCpsForm()
         {
@@ -365,16 +365,16 @@ namespace ui
         }
         private void InitPgmForm()
         {
-            pgmform = new pgmForm(this);
+            //pgmform = new pgmForm(this);
         }
         private void InitM72Form()
         {
-            m72form = new m72Form(this);
+            //m72form = new m72Form(this);
         }
-        private void InitM92Form()
+        /*private void InitM92Form()
         {
             m92form = new m92Form(this);
-        }
+        }*/
         private void InitLoadForm()
         {
             loadform = new loadForm(this);
@@ -530,7 +530,7 @@ namespace ui
         }
         private void ipsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ipsform.ShowDialog();
+            //ipsform.ShowDialog();
         }
         private void cpsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -546,15 +546,15 @@ namespace ui
         }
         private void pgmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pgmform.Show();
+            //pgmform.Show();
         }
         private void m72ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m72form.Show();
+            //m72form.Show();
         }
         private void m92ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m92form.Show();
+            //m92form.Show();
         }
         private void m68000ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -566,7 +566,7 @@ namespace ui
         }
         private void m6809ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m6809form.Show();
+            //m6809form.Show();
         }
         public void ResetPicturebox()
         {

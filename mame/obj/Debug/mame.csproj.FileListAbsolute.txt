@@ -73,17 +73,12 @@ C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.aboutForm.reso
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.cheatForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.cheatsearchForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.cpsForm.resources
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.ipsForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.ListViewControl.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.loadForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.m68000Form.resources
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.m6809Form.resources
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.m72Form.resources
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.m92Form.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.mainForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.namcos1Form.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.neogeoForm.resources
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.pgmForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.z80Form.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\mame.Properties.Resources.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\mame.csproj.GenerateResource.cache

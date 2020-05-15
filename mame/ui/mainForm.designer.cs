@@ -198,7 +198,7 @@
             this.m92ToolStripMenuItem.Name = "m92ToolStripMenuItem";
             this.m92ToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
             this.m92ToolStripMenuItem.Text = "M92 debugger";
-            this.m92ToolStripMenuItem.Click += new System.EventHandler(this.m92ToolStripMenuItem_Click);
+            //this.m92ToolStripMenuItem.Click += new System.EventHandler(this.m92ToolStripMenuItem_Click);
             // 
             // m68000ToolStripMenuItem
             // 
