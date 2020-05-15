@@ -52,18 +52,22 @@ namespace mame
             m68000Form.iRAddress = address;
             m68000Form.iROp = 0x02;
             if (address >=0x07C000 && address <=  0x07CFFF) {
-                /*if (serlatch)
+                if (Console.KeyAvailable)
+                        result = 0;
+                else
                     result = -1;
-                else*/
-                    result = 0;
             }
             else if (address >= 0x078000 && address <= 0x079FFF)
             {
-                result = (sbyte)commandline[cmdchar];
+                if (Console.KeyAvailable)
+                    result = (sbyte)Console.ReadKey(true).KeyChar;
+                else
+                    result = 0;
+                /*result = (sbyte)commandline[cmdchar];
                 if (commandline[cmdchar] == '$')
                     serlatch = true;
                 else
-                    cmdchar++;
+                    cmdchar++;*/
             }
             else if (address >= 0x07D000 && address <= 0x07DFFF)
             {
@@ -302,7 +306,8 @@ namespace mame
             //SJG
             else if (address >= 0x07A000 && address <= 0x07BFFF)
             {
-                Video.sDrawText = Video.sDrawText + Convert.ToChar(value);
+                //Video.sDrawText = Video.sDrawText + Convert.ToChar(value);
+                Console.Write(Convert.ToChar(value));
             }
             else if (address >= 0x800100 && address <= 0x80013f)
             {
