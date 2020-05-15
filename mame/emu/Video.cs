@@ -107,7 +107,7 @@ namespace mame
                     video_update_callback = CPS.video_update_cps1;
                     video_eof_callback = CPS.video_eof_cps1;
                     break;
-                case "CPS2":
+                /*case "CPS2":
                     screenstate.width = 0x200;
                     screenstate.height = 0x100;
                     screenstate.visarea.min_x = 0;
@@ -253,7 +253,7 @@ namespace mame
                     bbmp[0] = new Bitmap(0x200, 0x100);
                     video_update_callback = M92.video_update_m92;
                     video_eof_callback = M92.video_eof_m92;
-                    break;
+                    break;*/
             }
             screenstate.frame_period = frame_update_time.attoseconds;
             screenstate.scantime = screenstate.frame_period / screenstate.height;

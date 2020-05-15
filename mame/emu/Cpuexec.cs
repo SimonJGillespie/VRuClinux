@@ -137,7 +137,7 @@ namespace mame
                     cpu[0].attoseconds_per_cycle = Attotime.ATTOSECONDS_PER_SECOND / cpu[0].cycles_per_second;
                     cpu[1].attoseconds_per_cycle = Attotime.ATTOSECONDS_PER_SECOND / cpu[1].cycles_per_second;
                     break;
-                case "CPS-1(QSound)":
+                /*case "CPS-1(QSound)":
                     MC68000.m1 = new MC68000();
                     Z80A.z1 = new Z80A();
                     MC68000.m1.cpunum = 0;
@@ -281,7 +281,7 @@ namespace mame
                     cpu[0].attoseconds_per_cycle = Attotime.ATTOSECONDS_PER_SECOND / cpu[0].cycles_per_second;
                     cpu[1].attoseconds_per_cycle = Attotime.ATTOSECONDS_PER_SECOND / cpu[1].cycles_per_second;
                     vblank_interrupts_per_frame = 0;
-                    break;
+                    break;*/
             }
             activecpu = -1;
             for (icpu = 0; icpu < ncpu; icpu++)
@@ -379,7 +379,7 @@ namespace mame
                             break;
                     }
                     break;
-                case "CPS-1(QSound)":
+                /*case "CPS-1(QSound)":
                     MC68000.m1.ReadOpByte = CPS.MQReadOpByte;
                     MC68000.m1.ReadByte = CPS.MQReadByte;
                     MC68000.m1.ReadOpWord = CPS.MQReadOpWord;
@@ -747,14 +747,14 @@ namespace mame
                             MC68000.m1.WriteByte = PGM.MPWriteByte_orlegend;
                             MC68000.m1.WriteWord = PGM.MPWriteWord_orlegend;
                             break;
-                        /*case "drgw2":
+                        case "drgw2":
                             MC68000.m1.ReadByte = PGM.MPReadByte_drgw2;
                             MC68000.m1.ReadWord = MC68000.m1.ReadPcrelWord= PGM.MPReadWord_drgw2;
                             MC68000.m1.ReadLong = MC68000.m1.ReadPcrelLong= PGM.MPReadLong_drgw2;
                             MC68000.m1.WriteByte = PGM.MPWriteByte_drgw2;
                             MC68000.m1.WriteWord = PGM.MPWriteWord_drgw2;
                             MC68000.m1.WriteLong = PGM.MPWriteLong_drgw2;
-                            break;*/
+                            break;
                     }                    
                     cpu_inittimers();
                     break;
@@ -903,7 +903,7 @@ namespace mame
                             Nec.nn1[1].v25v35_decryptiontable = null;
                             break;
                     }
-                    break;
+                    break;*/
             }
             switch (Machine.sBoard)
             {
@@ -919,7 +919,7 @@ namespace mame
                     Z80A.z1.debugger_start_cpu_hook_callback = Machine.FORM.z80form.z80_start_debug;
                     Z80A.z1.debugger_stop_cpu_hook_callback = Machine.FORM.z80form.z80_stop_debug;
                     break;                
-                case "IGS011":
+                /*case "IGS011":
                     m68000Form.m68000State = m68000Form.M68000State.M68000_RUN;
                     MC68000.m1.debugger_start_cpu_hook_callback = Machine.FORM.m68000form.m68000_start_debug;
                     MC68000.m1.debugger_stop_cpu_hook_callback = Machine.FORM.m68000form.m68000_stop_debug;
@@ -940,7 +940,7 @@ namespace mame
                     Z80A.z1.debugger_stop_cpu_hook_callback = Machine.FORM.z80form.z80_stop_debug;
                     break;
                 case "M92":
-                    break;
+                    break;*/
             }
             for (icpu = 0; icpu < ncpu; icpu++)
             {
@@ -977,7 +977,7 @@ namespace mame
                     timedint_timer = Timer.timer_alloc_common(Generic.irq_1_0_line_hold, "irq_1_0_line_hold", false);
                     Timer.timer_adjust_periodic(timedint_timer, timedint_period, timedint_period);
                     break;
-                case "Neo Geo":
+                /*case "Neo Geo":
                     interleave_boost_timer = Timer.timer_alloc_common(null_callback, "boost_callback", false);
                     interleave_boost_timer_end = Timer.timer_alloc_common(end_interleave_boost, "end_interleave_boost", false);
                     break;
@@ -987,7 +987,7 @@ namespace mame
                 case "PGM":
                 case "M72":
                 case "M92":
-                    break;
+                    break;*/
             }
         }        
         public static void cpuexec_timeslice()
@@ -1104,7 +1104,7 @@ namespace mame
                 case "CPS-1(QSound)":
                     CPS.cps1_interrupt();
                     break;
-                case "CPS2":
+                /*case "CPS2":
                     iloops = 0;
                     CPS.cps2_interrupt();
                     Timer.timer_adjust_periodic(Cpuexec.cpu[0].partial_frame_timer, Cpuexec.cpu[0].partial_frame_period, Attotime.ATTOTIME_NEVER);
@@ -1135,7 +1135,7 @@ namespace mame
                     Timer.timer_adjust_periodic(Cpuexec.cpu[1].partial_frame_timer, Cpuexec.cpu[1].partial_frame_period, Attotime.ATTOTIME_NEVER);
                     break;
                 case "M92":
-                    break;
+                    break;*/
             }
         }
         public static void trigger_partial_frame_interrupt()
