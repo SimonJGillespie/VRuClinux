@@ -29,8 +29,8 @@ namespace ui
         public z80Form z80form;
         //public m6809Form m6809form;
         public cpsForm cpsform;
-        public neogeoForm neogeoform;
-        public namcos1Form namcos1form;
+        //public neogeoForm neogeoform;
+        //public namcos1Form namcos1form;
         //public pgmForm pgmform;
         //public m72Form m72form;
         //public m92Form m92form;
@@ -357,11 +357,11 @@ namespace ui
         }
         private void InitNeogeoForm()
         {
-            neogeoform = new neogeoForm(this);
+            //neogeoform = new neogeoForm(this);
         }
         private void InitNamcos1Form()
         {
-            namcos1form = new namcos1Form(this);
+            //namcos1form = new namcos1Form(this);
         }
         private void InitPgmForm()
         {
@@ -538,11 +538,11 @@ namespace ui
         }
         private void neogeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            neogeoform.Show();
+            //neogeoform.Show();
         }
         private void namcos1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            namcos1form.Show();
+            //namcos1form.Show();
         }
         private void pgmToolStripMenuItem_Click(object sender, EventArgs e)
         {
