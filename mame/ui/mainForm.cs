@@ -22,8 +22,8 @@ namespace ui
     {
         private ToolStripMenuItem[] itemSize;
         private loadForm loadform;
-        public cheatForm cheatform;
-        private cheatsearchForm cheatsearchform;
+        //public cheatForm cheatform;
+        //private cheatsearchForm cheatsearchform;
         //private ipsForm ipsform;        
         public m68000Form m68000form;
         public z80Form z80form;
@@ -305,7 +305,7 @@ namespace ui
                     break;
             }
         }
-        private void InitCheatForm()
+        /*private void InitCheatForm()
         {
             cheatform = new cheatForm(this);
             foreach (string sFile in Directory.GetFiles("cht"))
@@ -319,7 +319,7 @@ namespace ui
             {
                 cheatform.cbCht.SelectedIndex = 0;
             }
-        }
+        }*/
         private void InitIpsForm()
         {
             /*ipsform = new ipsForm(this);
@@ -337,7 +337,7 @@ namespace ui
         }
         private void InitCheatsearchForm()
         {
-            cheatsearchform = new cheatsearchForm(this);
+            //cheatsearchform = new cheatsearchForm(this);
         }
         private void InitM68000Form()
         {
@@ -522,11 +522,11 @@ namespace ui
         }
         private void cheatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cheatform.Show();
+            //cheatform.Show();
         }
         private void cheatsearchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cheatsearchform.Show();
+            //cheatsearchform.Show();
         }
         private void ipsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -600,8 +600,8 @@ namespace ui
         }
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            aboutForm about1 = new aboutForm();
-            about1.ShowDialog();
+            //aboutForm about1 = new aboutForm();
+            //about1.ShowDialog();
         }
         private void mainForm_Resize(object sender, EventArgs e)
         {
