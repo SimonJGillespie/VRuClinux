@@ -114,13 +114,13 @@ namespace ui
             InitIpsForm();
             InitM68000Form();
             InitZ80Form();
-            InitM6809Form();
+            //InitM6809Form();
             InitCpsForm();
-            InitNeogeoForm();
-            InitNamcos1Form();
-            InitPgmForm();
-            InitM72Form();
-            InitM92Form();
+            //InitNeogeoForm();
+            //InitNamcos1Form();
+            //InitPgmForm();
+            //InitM72Form();
+            //InitM92Form();
             ApplyRom();
         }
         public void LoadRom()
