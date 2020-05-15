@@ -59,6 +59,33 @@ namespace ui
         {
             InitializeComponent();
         }
+
+        public void ApplyRom()
+        {
+            //if (listView1.SelectedItems.Count > 0)
+            //{
+                this.Close();
+                Mame.exit_pending = true;
+                Thread.Sleep(100);
+                //RomInfo.Rom = RomInfo.GetRomByName(listView1.SelectedItems[0].SubItems[2].Text);
+                RomInfo.Rom = RomInfo.GetRomByName("ffightu");
+                this.LoadRom();
+                if (Machine.bRom)
+                {
+                    m68000Form.iStatus = 0;
+                    m68000Form.iRAddress = 0;
+                    m68000Form.iROp = 0;
+                    m68000Form.iValue = 0;
+                    z80Form.iStatus = 0;
+                    Mame.exit_pending = false;
+                    this.resetToolStripMenuItem.Enabled = true;
+                    //this..gameStripMenuItem.Enabled = true;
+                    UI.ui_init(this);
+                    mainForm.t1 = new Thread(Mame.mame_execute);
+                    mainForm.t1.Start();
+                }
+           // }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             StreamReader sr1 = new StreamReader("mame.ini");
@@ -79,7 +106,9 @@ namespace ui
             desc1.GlobalFocus = true;
             Keyboard.InitializeInput(this);
             Sound.buf2 = new SecondaryBuffer(desc1, dev);
+
             InitLoadForm();
+
             InitCheatForm();
             InitCheatsearchForm();
             InitIpsForm();
@@ -92,6 +121,7 @@ namespace ui
             InitPgmForm();
             InitM72Form();
             InitM92Form();
+            ApplyRom();
         }
         public void LoadRom()
         {
@@ -380,6 +410,7 @@ namespace ui
             XElement xe = XElement.Parse(mame.Properties.Resources.mame);
             IEnumerable<XElement> elements = from ele in xe.Elements("game") select ele;
             showInfoByElements(elements);
+            //loadRomList(elements);
         }
         private void showInfoByElements(IEnumerable<XElement> elements)
         {
@@ -401,6 +432,27 @@ namespace ui
             }
             //sw1.Close();
         }
+        private void loadRomList(IEnumerable<XElement> elements)
+        {
+            RomInfo.romList = new List<RomInfo>();
+            //StreamWriter sw1 = new StreamWriter("1.txt", false);
+            foreach (var ele in elements)
+            {
+                RomInfo rom = new RomInfo();
+                rom.Name = ele.Attribute("name").Value;
+                rom.Board = ele.Attribute("board").Value;
+                rom.Parent = ele.Element("parent").Value;
+                rom.Direction = ele.Element("direction").Value;
+                rom.Description = ele.Element("description").Value;
+                rom.Year = ele.Element("year").Value;
+                rom.Manufacturer = ele.Element("manufacturer").Value;
+                RomInfo.romList.Add(rom);
+                //loadform.listView1.Items.Add(new ListViewItem(new string[] { rom.Description, rom.Year, rom.Name, rom.Parent, rom.Direction, rom.Manufacturer, rom.Board }));
+                //sw1.WriteLine(rom.Name + "\t" + rom.Board + "\t" + rom.Parent + "\t" + rom.Direction + "\t" + rom.Description + "\t" + rom.Year + "\t" + rom.Manufacturer);
+            }
+            //sw1.Close();
+        }
+
         private WaveFormat CreateWaveFormat()
         {
             WaveFormat format = new Microsoft.DirectX.DirectSound.WaveFormat();

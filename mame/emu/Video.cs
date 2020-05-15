@@ -369,12 +369,13 @@ namespace mame
         }
         public static void video_frame_update()
         {
+            Mame.paused = false;
             Atime current_time = Timer.global_basetime;
             if (!Mame.paused)
             {
                 finish_screen_updates();
             }
-            Keyboard.Update();
+            //Keyboard.Update();
             Inptport.frame_update_callback();
             UI.ui_update_and_render();
             if(Machine.FORM.cheatform.lockState == ui.cheatForm.LockState.LOCK_FRAME)
