@@ -51,6 +51,11 @@ namespace mame
             sbyte result = 0;
             m68000Form.iRAddress = address;
             m68000Form.iROp = 0x02;
+            if (Console.KeyAvailable && !serlatch)
+            {
+                Cpuint.cpunum_set_input_line(0, 2, LineState.HOLD_LINE);
+                serlatch = true;
+            }
             if (address >=0x07C000 && address <=  0x07CFFF) {
                 if (Console.KeyAvailable)
                         result = 0;
@@ -60,7 +65,11 @@ namespace mame
             else if (address >= 0x078000 && address <= 0x079FFF)
             {
                 if (Console.KeyAvailable)
+                {
                     result = (sbyte)Console.ReadKey(true).KeyChar;
+                    serlatch = false;
+                    //char dummy= Console.ReadKey(true).KeyChar;
+                }
                 else
                     result = 0;
                 /*result = (sbyte)commandline[cmdchar];
@@ -307,7 +316,7 @@ namespace mame
             else if (address >= 0x07A000 && address <= 0x07BFFF)
             {
                 //Video.sDrawText = Video.sDrawText + Convert.ToChar(value);
-                Console.Write(Convert.ToChar(value));
+                Console.Write(Convert.ToChar(value & 0x7f));
             }
             else if (address >= 0x800100 && address <= 0x80013f)
             {
