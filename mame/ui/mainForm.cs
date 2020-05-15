@@ -109,8 +109,8 @@ namespace ui
 
             InitLoadForm();
 
-            InitCheatForm();
-            InitCheatsearchForm();
+            //InitCheatForm();
+            //InitCheatsearchForm();
             InitIpsForm();
             InitM68000Form();
             InitZ80Form();

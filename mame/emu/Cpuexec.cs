@@ -1040,10 +1040,10 @@ namespace mame
                 cpu[icpu].eatcycles = cpu[icpu].nexteatcycles;
             }
             Timer.timer_set_global_time(target);
-            if (Timer.global_basetime.attoseconds == 0 && Machine.FORM.cheatform.lockState == cheatForm.LockState.LOCK_SECOND)
+           /* if (Timer.global_basetime.attoseconds == 0 && Machine.FORM.cheatform.lockState == cheatForm.LockState.LOCK_SECOND)
             {
                 Machine.FORM.cheatform.ApplyCheat();
-            }
+            }*/
         }
         public static void cpu_boost_interleave(Atime timeslice_time, Atime boost_duration)
         {

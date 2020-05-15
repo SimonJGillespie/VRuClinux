@@ -378,10 +378,10 @@ namespace mame
             //Keyboard.Update();
             Inptport.frame_update_callback();
             UI.ui_update_and_render();
-            if(Machine.FORM.cheatform.lockState == ui.cheatForm.LockState.LOCK_FRAME)
+            /*if(Machine.FORM.cheatform.lockState == ui.cheatForm.LockState.LOCK_FRAME)
             {
                 Machine.FORM.cheatform.ApplyCheat();
-            }
+            }*/
             GDIDraw();
             if (effective_throttle())
             {
