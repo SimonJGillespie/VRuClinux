@@ -108,6 +108,12 @@ namespace ui
             //Sound.buf2 = new SecondaryBuffer(desc1, dev);
 
             InitLoadForm();
+            RomInfo.Rom.Name="ffightu";
+            RomInfo.Rom.Board = "CPS1";
+            RomInfo.Rom.Parent="ffight";
+            RomInfo.Rom.Direction="";
+            RomInfo.Rom.Description="";
+            RomInfo.Rom.Manufacturer="CapCom";
 
             //InitCheatForm();
             //InitCheatsearchForm();

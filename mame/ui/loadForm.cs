@@ -68,7 +68,7 @@ namespace ui
                 Mame.exit_pending = true;
                 Thread.Sleep(100);
                 //RomInfo.Rom = RomInfo.GetRomByName(listView1.SelectedItems[0].SubItems[2].Text);
-                RomInfo.Rom = RomInfo.GetRomByName("ffightu");
+                //RomInfo.Rom = RomInfo.GetRomByName("ffightu");
                 this._myParentForm.LoadRom();
                 if (Machine.bRom)
                 {
