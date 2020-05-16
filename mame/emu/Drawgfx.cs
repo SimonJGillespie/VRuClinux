@@ -18,8 +18,8 @@ namespace mame
         private static void setpixelcolorNa(int offsety, int offsetx, int n)
         {
             int i1 = Tilemap.priority_bitmap[offsety, offsetx];
-            int i2 = Namcos1.namcos1_pri;
-            if (i1 != 0x1f && i1 <= i2)
+            //int i2 = Namcos1.namcos1_pri;
+            if (i1 != 0x1f /*&& i1 <= i2*/)
             {
                 Video.bitmapbase[Video.curbitmap][offsety * 0x200 + offsetx] = (ushort)n;
             }
@@ -160,11 +160,11 @@ namespace mame
             {
                 for (iwidth = 0; iwidth < dstwidth; iwidth++)
                 {
-                    col = Namcos1.gfx3rom[src_offset + iheight * 0x20 + iwidth];
+                    /*col = Namcos1.gfx3rom[src_offset + iheight * 0x20 + iwidth];
                     if (col != 0x0f)
                     {
                         setpixelcolorNa(offsety + iheight * ydir, offsetx + iwidth * xdir, colorbase + col);
-                    }
+                    }*/
                 }
             }
         }

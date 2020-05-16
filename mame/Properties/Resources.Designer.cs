@@ -97,16 +97,6 @@ namespace mame.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] mcu {
-            get {
-                object obj = ResourceManager.GetObject("mcu", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Detail: https://www.codeproject.com/Articles/1275365/MAME-NET
         ///You should install Microsoft .NET Framework 3.5 or higher before running the program. You should download MAME.NET ROM files in roms directory.
         ///Hotkey: F3 -- soft reset, F7 -- load state, Shift+F7 -- save state, F8 -- replay input, Shift+F8 -- record input (start and stop), 0-9 and A-Z after state related hotkey -- handle certain files, F10 -- toggle global throttle, P -- pause and continue, shift+P -- skip a frame.

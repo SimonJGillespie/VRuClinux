@@ -138,11 +138,11 @@
   </data>
   <data name="_000_lo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\mame\neogeo\000-lo.lo;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>-->
+  </data>
   <data name="mcu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\mame\namcos1\cus64-64a1.mcu;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
- <!-- <data name="pgmmainbios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+ <data name="pgmmainbios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\mame\pgm\mainbios.rom;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pgmvideobios" type="System.Resources.ResXFileRef, System.Windows.Forms">

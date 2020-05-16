@@ -225,16 +225,16 @@ namespace mame
                     break;
                 case "quester":
                 case "questers":
-                    loop_inputports_callback = Namcos1.loop_inputports_ns1_quester;
+                    //loop_inputports_callback = Namcos1.loop_inputports_ns1_quester;
                     break;
                 case "berabohm":
-                    loop_inputports_callback = Namcos1.loop_inputports_ns1_berabohm;
+                    //loop_inputports_callback = Namcos1.loop_inputports_ns1_berabohm;
                     break;
                 case "faceoff":
-                    loop_inputports_callback = Namcos1.loop_inputports_ns1_faceoff;
+                    //loop_inputports_callback = Namcos1.loop_inputports_ns1_faceoff;
                     break;
                 case "tankfrce4":
-                    loop_inputports_callback = Namcos1.loop_inputports_ns1_tankfrce4;
+                    //loop_inputports_callback = Namcos1.loop_inputports_ns1_tankfrce4;
                     break;
                 /*case "":
                 case "":
