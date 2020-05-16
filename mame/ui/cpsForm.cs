@@ -53,25 +53,25 @@ namespace ui
             tbScroll2y.Text = CPS.scroll2y.ToString("X4");
             tbScroll3x.Text = CPS.scroll3x.ToString("X4");
             tbScroll3y.Text = CPS.scroll3y.ToString("X4");
-            tbScrollsx.Text = CPS.scrollxSG.ToString();
-            tbScrollsy.Text = CPS.scrollySG.ToString();
+            //tbScrollsx.Text = CPS.scrollxSG.ToString();
+            //tbScrollsy.Text = CPS.scrollySG.ToString();
         }
         private void btnDraw_Click(object sender, EventArgs e)
         {
             GetData();
-            CPS.bRender0G = cbL0.Checked;
-            CPS.bRender1G = cbL1.Checked;
-            CPS.bRender2G = cbL2.Checked;
-            CPS.bRender3G = cbL3.Checked;
-            CPS.GetData();
-            Bitmap bm1 = CPS.GetAllGDI();
-            pictureBox1.Width = bm1.Width;
-            pictureBox1.Height = bm1.Height;
-            pictureBox1.Image = bm1;
-            tbL0.Text = CPS.l0G.ToString();
-            tbL1.Text = CPS.l1G.ToString();
-            tbL2.Text = CPS.l2G.ToString();
-            tbL3.Text = CPS.l3G.ToString();
+            //CPS.bRender0G = cbL0.Checked;
+            //CPS.bRender1G = cbL1.Checked;
+            //CPS.bRender2G = cbL2.Checked;
+            //CPS.bRender3G = cbL3.Checked;
+            //CPS.GetData();
+            //Bitmap bm1 = CPS.GetAllGDI();
+            //pictureBox1.Width = bm1.Width;
+            //pictureBox1.Height = bm1.Height;
+            //pictureBox1.Image = bm1;
+            //tbL0.Text = CPS.l0G.ToString();
+            //tbL1.Text = CPS.l1G.ToString();
+           // tbL2.Text = CPS.l2G.ToString();
+            //tbL3.Text = CPS.l3G.ToString();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -124,11 +124,11 @@ namespace ui
         }
         private void btnSetSX_Click(object sender, EventArgs e)
         {
-            CPS.scrollxSG = int.Parse(tbScrollsx.Text);
+           //CPS.scrollxSG = int.Parse(tbScrollsx.Text);
         }
         private void btnSetSY_Click(object sender, EventArgs e)
         {
-            CPS.scrollySG = int.Parse(tbScrollsy.Text);
+            //CPS.scrollySG = int.Parse(tbScrollsy.Text);
         }
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -143,7 +143,7 @@ namespace ui
             base1 = (CPS.cps_a_regs[5] * 0x100) & 0x3ffff;
             for (i = 0; i < 0xc00 * 2; i++)
             {
-                CPS.bbPaletteG[i] = CPS.gfxram[base1 + i];
+                //CPS.bbPaletteG[i] = CPS.gfxram[base1 + i];
             }
         }
         private void btnDrawpri_Click(object sender, EventArgs e)
@@ -154,7 +154,7 @@ namespace ui
             {
                 for (j = 0; j < 0x200; j++)
                 {
-                    if (CPS.priority_bitmapG[j, i] == 0x00)
+                    /*if (CPS.priority_bitmapG[j, i] == 0x00)
                     {
                         bm1.SetPixel(j, i, Palette.trans_color);
                     }
@@ -173,7 +173,7 @@ namespace ui
                     else if (CPS.priority_bitmapG[j, i] != 0)
                     {
                         bm1.SetPixel(j, i, Color.Black);
-                    }
+                    }*/
                 }
             }
             pictureBox1.Image = bm1;
@@ -187,14 +187,14 @@ namespace ui
                 Bitmap bm1 = null;
                 code = int.Parse(tbCode.Text, NumberStyles.HexNumber);
                 color = int.Parse(tbColor.Text, NumberStyles.HexNumber);
-                CPS.GetData();
-                for (i1 = 0; i1 < CPS.nColorG; i1++)
+                //CPS.GetData();
+               /* for (i1 = 0; i1 < CPS.nColorG; i1++)
                 {
                     if (i1 % 16 == 15)
                     {
                         CPS.cc1G[i1] = Palette.trans_color;
                     }
-                }
+                }*/
                 if (cbLayer.SelectedIndex == 0)
                 {
                     bm1 = GetTile0(0, code, color);
@@ -259,16 +259,16 @@ namespace ui
                                 iOffset = iCode * 0x80 + gfxset * 8 + i1 + i2 * 16;
                                 iByte = CPS.gfx1rom[iOffset];
                                 idx = iColor * 0x10 + iByte;
-                                c1 = CPS.cc1G[idx];
+                                // = CPS.cc1G[idx];
                                 for (i5 = 0; i5 < ratio; i5++)
                                 {
                                     for (i6 = 0; i6 < ratio; i6++)
                                     {
                                         ptr2 = ptr + (((y0 + dy0 * i2) * ratio + i6) * width + ((x0 + dx0 * i1) * ratio + i5)) * 4;
-                                        *ptr2 = c1.B;
-                                        *(ptr2 + 1) = c1.G;
-                                        *(ptr2 + 2) = c1.R;
-                                        *(ptr2 + 3) = c1.A;
+                                        //*ptr2 = c1.B;
+                                        //*(ptr2 + 1) = c1.G;
+                                       // *(ptr2 + 2) = c1.R;
+                                       // *(ptr2 + 3) = c1.A;
                                     }
                                 }
                             }
@@ -320,16 +320,16 @@ namespace ui
                                 iOffset = iCode * 0x40 * 4 + i1 + i2 * 16;
                                 iByte = CPS.gfx1rom[iOffset];
                                 idx = iColor * 0x10 + iByte;
-                                c1 = CPS.cc1G[idx];
+                                //c1 = CPS.cc1G[idx];
                                 for (i5 = 0; i5 < ratio; i5++)
                                 {
                                     for (i6 = 0; i6 < ratio; i6++)
                                     {
                                         ptr2 = ptr + (((y0 + dy0 * i2) * ratio + i6) * width + ((x0 + dx0 * i1) * ratio + i5)) * 4;
-                                        *ptr2 = c1.B;
-                                        *(ptr2 + 1) = c1.G;
-                                        *(ptr2 + 2) = c1.R;
-                                        *(ptr2 + 3) = c1.A;
+                                        //*ptr2 = c1.B;
+                                        //*(ptr2 + 1) = c1.G;
+                                        //*(ptr2 + 2) = c1.R;
+                                        //*(ptr2 + 3) = c1.A;
                                     }
                                 }
                             }
@@ -381,16 +381,16 @@ namespace ui
                                 iOffset = iCode * 0x40 * 16 + i1 + i2 * 16 * 2;
                                 iByte = CPS.gfx1rom[iOffset];
                                 idx = iColor * 0x10 + iByte;
-                                c1 = CPS.cc1G[idx];
+                               // c1 = CPS.cc1G[idx];
                                 for (i5 = 0; i5 < ratio; i5++)
                                 {
                                     for (i6 = 0; i6 < ratio; i6++)
                                     {
                                         ptr2 = ptr + (((y0 + dy0 * i2) * ratio + i6) * width + ((x0 + dx0 * i1) * ratio + i5)) * 4;
-                                        *ptr2 = c1.B;
-                                        *(ptr2 + 1) = c1.G;
-                                        *(ptr2 + 2) = c1.R;
-                                        *(ptr2 + 3) = c1.A;
+                                        //*ptr2 = c1.B;
+                                       // *(ptr2 + 1) = c1.G;
+                                      //  *(ptr2 + 2) = c1.R;
+                                      //  *(ptr2 + 3) = c1.A;
                                     }
                                 }
                             }

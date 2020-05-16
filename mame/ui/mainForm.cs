@@ -115,7 +115,7 @@ namespace ui
             InitM68000Form();
             InitZ80Form();
             //InitM6809Form();
-            InitCpsForm();
+            //InitCpsForm();
             //InitNeogeoForm();
             //InitNamcos1Form();
             //InitPgmForm();

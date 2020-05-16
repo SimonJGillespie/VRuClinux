@@ -98,7 +98,7 @@ namespace mame
         }
         public static void init_machine()
         {
-            Inptport.input_init();
+            //Inptport.input_init();
             Generic.generic_machine_init();
             Timer.timer_init();
             soft_reset_timer = Timer.timer_alloc_common(soft_reset, "soft_reset", false);
@@ -208,8 +208,8 @@ namespace mame
                     return;
                 }*/
                 char file;
-                foreach (Key key1 in Inptport.lk)
-                {
+                //foreach (Key key1 in Inptport.lk)
+                //{
                     /*if (Keyboard.IsTriggered(key1))
                     {
                         file = Inptport.getcharbykey(key1);
@@ -237,7 +237,7 @@ namespace mame
                         mame_pause(false);
                         return;
                     }*/
-                }
+               // }
             }
         }
         private static void handle_record()
@@ -267,8 +267,8 @@ namespace mame
                         return;
                     } */                   
                     char file;
-                    foreach (Key key1 in Inptport.lk)
-                    {
+                    //foreach (Key key1 in Inptport.lk)
+                   // {
                         /*if (Keyboard.IsTriggered(key1))
                         {
                             file = Inptport.getcharbykey(key1);
@@ -298,7 +298,7 @@ namespace mame
                             mame_pause(false);
                             return;
                         }*/
-                    }
+                    //}
                 }
                 else if (playState == PlayState.PLAY_RECORDEND)
                 {
@@ -337,8 +337,8 @@ namespace mame
                         return;
                     }*/
                     char file;
-                    foreach (Key key1 in Inptport.lk)
-                    {
+                    //foreach (Key key1 in Inptport.lk)
+                    //{
                         /*if (Keyboard.IsTriggered(key1))
                         {
                             file = Inptport.getcharbykey(key1);
@@ -386,7 +386,7 @@ namespace mame
                             mame_pause(false);
                             return;
                         }*/
-                    }
+                   // }
                 }
             }
             if (playState == PlayState.PLAY_REPLAYEND)
