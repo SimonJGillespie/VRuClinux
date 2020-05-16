@@ -80,7 +80,7 @@ namespace ui
                     Mame.exit_pending = false;
                     this._myParentForm.resetToolStripMenuItem.Enabled = true;
                     this._myParentForm.gameStripMenuItem.Enabled = true;
-                    UI.ui_init(this._myParentForm);
+                    //UI.ui_init(this._myParentForm);
                     mainForm.t1 = new Thread(Mame.mame_execute);
                     mainForm.t1.Start();
                 }

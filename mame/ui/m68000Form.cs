@@ -186,7 +186,7 @@ namespace ui
         }
         private void btnStep4_Click(object sender, EventArgs e)
         {
-            UI.single_step = true;
+            //UI.single_step = true;
             m68000State = M68000State.M68000_RUN;
             tsslStatus.Text = "m68000 run";
         }

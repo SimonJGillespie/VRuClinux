@@ -80,7 +80,7 @@ namespace ui
                     Mame.exit_pending = false;
                     this.resetToolStripMenuItem.Enabled = true;
                     //this..gameStripMenuItem.Enabled = true;
-                    UI.ui_init(this);
+                    //UI.ui_init(this);
                     mainForm.t1 = new Thread(Mame.mame_execute);
                     mainForm.t1.Start();
                 }
@@ -290,7 +290,7 @@ namespace ui
             switch (Machine.sName)
             {
                 case "drgnwrld":
-                    if (UI.single_step || Mame.paused)
+                    /*if (UI.single_step || Mame.paused)
                     {
                         Screen[] screen = Screen.AllScreens;
                         this.Cursor = new Cursor(Cursor.Current.Handle);
@@ -301,7 +301,7 @@ namespace ui
                     {
                         Cursor.Clip = new Rectangle(new Point(this.Location.X + 7 + this.pictureBox1.Location.X, this.Location.Y + 29 + this.pictureBox1.Location.Y), this.pictureBox1.Size);
                         HideCursor();
-                    }
+                    }*/
                     break;
             }
         }
@@ -378,7 +378,7 @@ namespace ui
         private void InitLoadForm()
         {
             loadform = new loadForm(this);
-            ColumnHeader columnheader;
+           ColumnHeader columnheader;
             columnheader = new ColumnHeader();
             columnheader.Text = "Title";
             columnheader.Width = 350;
@@ -468,7 +468,7 @@ namespace ui
         {
             if (Machine.bRom)
             {
-                UI.cpurun();
+                //UI.cpurun();
             }
             Mame.exit_pending = true;
             Thread.Sleep(100);
@@ -492,7 +492,7 @@ namespace ui
             }
             if (Machine.bRom)
             {
-                UI.cpurun();
+                //UI.cpurun();
                 Mame.mame_pause(true);
             }
             //bRunning = false;

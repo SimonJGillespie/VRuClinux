@@ -286,10 +286,13 @@ namespace mame
             activecpu = -1;
             for (icpu = 0; icpu < ncpu; icpu++)
             {
-                cpu[icpu].suspend = SUSPEND_REASON_RESET;
-                cpu[icpu].localtime = Attotime.ATTOTIME_ZERO;
-                cpu[icpu].TotalExecutedCycles = 0;
-                cpu[icpu].PendingCycles = 0;
+                
+                
+                    cpu[icpu].suspend = SUSPEND_REASON_RESET;
+                    cpu[icpu].localtime = Attotime.ATTOTIME_ZERO;
+                    cpu[icpu].TotalExecutedCycles = 0;
+                    cpu[icpu].PendingCycles = 0;
+                
             }
             compute_perfect_interleave();
         }
@@ -309,8 +312,8 @@ namespace mame
                     MC68000.m1.WriteLong = CPS.MCWriteLong;
                     Z80A.z1.ReadOp = CPS.ZCReadOp;
                     Z80A.z1.ReadOpArg = CPS.ZCReadMemory;
-                    Z80A.z1.ReadMemory = CPS.ZCReadMemory;
-                    Z80A.z1.WriteMemory = CPS.ZCWriteMemory;
+                   Z80A.z1.ReadMemory = CPS.ZCReadMemory;
+                   Z80A.z1.WriteMemory = CPS.ZCWriteMemory;
                     Z80A.z1.ReadHardware = CPS.ZCReadHardware;
                     Z80A.z1.WriteHardware = CPS.ZCWriteHardware;
                     Z80A.z1.IRQCallback = CPS.ZIRQCallback;                    

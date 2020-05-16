@@ -68,7 +68,7 @@ namespace mame
         {
             Wintime.wintime_init();
             global_throttle = true;
-            UI.ui_handler_callback = UI.handler_ingame;
+            //UI.ui_handler_callback = UI.handler_ingame;
             sDrawText = "";
             popup_text_end = 0;
             popcount = new int[256]{
@@ -96,7 +96,7 @@ namespace mame
                     frame_update_time = new Atime(0, (long)(1e18 / 59.61));//59.61Hz
                     screenstate.vblank_period = 0;
                     bitmapGDI = new Bitmap(Video.fullwidth, Video.fullheight);
-                    UI.ui_update_callback = UI.ui_updateC;
+                   // UI.ui_update_callback = UI.ui_updateC;
                     bitmapbase = new ushort[2][];
                     bitmapbase[0] = new ushort[0x200 * 0x200];
                     bitmapbase[1] = new ushort[0x200 * 0x200];
@@ -377,7 +377,7 @@ namespace mame
             }
             //Keyboard.Update();
             //Inptport.frame_update_callback();
-            UI.ui_update_and_render();
+            //UI.ui_update_and_render();
             /*if(Machine.FORM.cheatform.lockState == ui.cheatForm.LockState.LOCK_FRAME)
             {
                 Machine.FORM.cheatform.ApplyCheat();

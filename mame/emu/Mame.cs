@@ -65,12 +65,12 @@ namespace mame
             if (playState == PlayState.PLAY_SAVE)
             {
                 mame_pause(true);
-                UI.ui_handler_callback = handle_save;
+                //UI.ui_handler_callback = handle_save;
             }
             else if (playState == PlayState.PLAY_LOAD)
             {
                 mame_pause(true);
-                UI.ui_handler_callback = handle_load;
+                //UI.ui_handler_callback = handle_load;
             }
             else if (playState == PlayState.PLAY_RESET)
             {
@@ -80,7 +80,7 @@ namespace mame
             else if (playState == PlayState.PLAY_RECORDSTART)
             {
                 mame_pause(true);
-                UI.ui_handler_callback = handle_record;
+                //UI.ui_handler_callback = handle_record;
             }
             else if (playState == PlayState.PLAY_RECORDEND)
             {
@@ -89,7 +89,7 @@ namespace mame
             else if (playState == PlayState.PLAY_REPLAYSTART)
             {
                 mame_pause(true);
-                UI.ui_handler_callback = handle_replay;
+                //UI.ui_handler_callback = handle_replay;
             }
             else if (playState == PlayState.PLAY_REPLAYEND)
             {
