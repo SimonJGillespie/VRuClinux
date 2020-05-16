@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+//using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -28,7 +28,7 @@ namespace ui
         public m68000Form m68000form;
         public z80Form z80form;
         //public m6809Form m6809form;
-        public cpsForm cpsform;
+        //public cpsForm cpsform;
         //public neogeoForm neogeoform;
         //public namcos1Form namcos1form;
         //public pgmForm pgmform;
@@ -153,7 +153,7 @@ namespace ui
                     for (i = 0; i < Video.nMode; i++)
                     {
                         itemSize[i] = new ToolStripMenuItem();
-                        itemSize[i].Size = new Size(152, 22);
+                        //itemSize[i].Size = new Size(152, 22);
                         itemSize[i].Click += new EventHandler(itemsizeToolStripMenuItem_Click);
                     }
                     itemSize[0].Text = "512x512";
@@ -353,7 +353,7 @@ namespace ui
         }
         private void InitCpsForm()
         {
-            cpsform = new cpsForm(this);
+            //cpsform = new cpsForm(this);
         }
         private void InitNeogeoForm()
         {
@@ -534,7 +534,7 @@ namespace ui
         }
         private void cpsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cpsform.Show();
+            //cpsform.Show();
         }
         private void neogeoToolStripMenuItem_Click(object sender, EventArgs e)
         {

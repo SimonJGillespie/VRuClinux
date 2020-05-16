@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+//using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -46,7 +46,7 @@ namespace ui
             cbAs = new MyCheckBox[8];
             for (i = 0; i < 8; i++)
             {
-                tbDs[i] = new TextBox();
+                /*tbDs[i] = new TextBox();
                 tbDs[i].Location = new Point(14, 24 + i * 24);
                 tbDs[i].Size = new Size(70, 21);
                 Controls.Add(tbDs[i]);
@@ -65,18 +65,18 @@ namespace ui
                 cbAs[i].Size = new Size(15, 14);
                 cbAs[i].TB = tbAs[i];
                 cbAs[i].str = "A" + i.ToString() + "=";
-                Controls.Add(cbAs[i]);
+                Controls.Add(cbAs[i]);*/
             }            
             InitializeComponent();
             cbPC = new MyCheckBox();
-            cbPC.Location = new Point(298, 328);
-            cbPC.Size = new Size(15, 14);
+            //cbPC.Location = new Point(298, 328);
+            //cbPC.Size = new Size(15, 14);
             cbPC.TB = tbPC;
             cbPC.str = "PC=";
             Controls.Add(cbPC);
             cbTotal = new MyCheckBox();
-            cbTotal.Location = new Point(348, 285);
-            cbTotal.Size = new Size(15, 14);
+            //cbTotal.Location = new Point(348, 285);
+            //cbTotal.Size = new Size(15, 14);
             cbTotal.TB = tbCycles;
             cbTotal.str = "";
             Controls.Add(cbTotal);

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+//using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Drawing.Imaging;
+//using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using mame;
@@ -75,7 +75,7 @@ namespace ui
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Bitmap bm1, bm3;
+            /*Bitmap bm1, bm3;
             int width1,width2, height1, height2,widthall,heightall;
             string[] ss1 = tbPoint.Text.Split(sde2, StringSplitOptions.RemoveEmptyEntries);
             bm1 = (Bitmap)pictureBox1.Image;
@@ -90,7 +90,7 @@ namespace ui
             Point[] destPoints3 = { new Point(-width1, -height1), new Point(width2, -height1), new Point(-width1, height2) };
             g3.DrawImage(bm1, destPoints3);
             g3.Dispose();
-            bm3.Save(tbFile.Text + ".png", ImageFormat.Png);
+            bm3.Save(tbFile.Text + ".png", ImageFormat.Png);*/
         }        
         private void btnSet1X_Click(object sender, EventArgs e)
         {
@@ -148,7 +148,7 @@ namespace ui
         }
         private void btnDrawpri_Click(object sender, EventArgs e)
         {
-            int i, j;
+            /*int i, j;
             Bitmap bm1 = new Bitmap(0x200, 0x200);
             for (i = 0; i < 0x200; i++)
             {
@@ -173,10 +173,10 @@ namespace ui
                     else if (CPS.priority_bitmapG[j, i] != 0)
                     {
                         bm1.SetPixel(j, i, Color.Black);
-                    }*/
+                    }
                 }
             }
-            pictureBox1.Image = bm1;
+            pictureBox1.Image = bm1;*/
         }
         private void btnDrawtile_Click(object sender, EventArgs e)
         {
@@ -184,17 +184,17 @@ namespace ui
             int code, color;
             try
             {
-                Bitmap bm1 = null;
+                /*Bitmap bm1 = null;
                 code = int.Parse(tbCode.Text, NumberStyles.HexNumber);
                 color = int.Parse(tbColor.Text, NumberStyles.HexNumber);
                 //CPS.GetData();
-               /* for (i1 = 0; i1 < CPS.nColorG; i1++)
+                for (i1 = 0; i1 < CPS.nColorG; i1++)
                 {
                     if (i1 % 16 == 15)
                     {
                         CPS.cc1G[i1] = Palette.trans_color;
                     }
-                }*/
+                }
                 if (cbLayer.SelectedIndex == 0)
                 {
                     bm1 = GetTile0(0, code, color);
@@ -211,14 +211,14 @@ namespace ui
                 {
                     bm1 = GetTile2(code, color);
                 }
-                pictureBox1.Image = bm1;
+                pictureBox1.Image = bm1;*/
             }
             catch
             {
                 MessageBox.Show("error input");
             }
         }
-        private Bitmap GetTile0(int gfxset, int code1, int iColor)
+        /*private Bitmap GetTile0(int gfxset, int code1, int iColor)
         {
             int i1, i2, i3, i4, i5, i6;
             int iCode, iByte, cols, rows;
@@ -400,7 +400,7 @@ namespace ui
             }
             bm1.UnlockBits(bmData);
             return bm1;
-        }
+        }*/
         private void btnDumpRam_Click(object sender, EventArgs e)
         {
             DumpRam();

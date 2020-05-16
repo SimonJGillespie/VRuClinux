@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Drawing;
-using System.Drawing.Imaging;
+//using System.Drawing;
+//using System.Drawing.Imaging;
 using System.IO;
 
 namespace mame
@@ -11,7 +11,7 @@ namespace mame
     public partial class CPS
     {        
         private static int iXAll, iYAll, nBitmap;
-        private static Bitmap bmAll=new Bitmap(512,512);
+       // private static Bitmap bmAll=new Bitmap(512,512);
         private static List<string> lBitmapHash = new List<string>();
         private static int cpsb_addr, cpsb_value, mult_factor1, mult_factor2, mult_result_lo, mult_result_hi;
         public static int layercontrol, layer_control, palette_control, in2_addr, in3_addr, out2_addr, bootleg_kludge;        
@@ -279,10 +279,10 @@ namespace mame
         }
         public static void video_start_cps()
         {
-            bmAll = new Bitmap(512, 512);
+            /*bmAll = new Bitmap(512, 512);
             Graphics g = Graphics.FromImage(bmAll);
             g.Clear(Color.Magenta);
-            g.Dispose();
+            g.Dispose();*/
             int i;
             /*ttmap[0].enable = true;
             ttmap[1].enable = true;
@@ -424,7 +424,7 @@ namespace mame
             int[] iiRender;
             int i9,n1;
             int baseoffset,baseadd;
-            Color c1 = new Color();
+            //Color c1 = new Color();
             int iSprite = 0, nSprite, iOffset, iRatio=1,iFlip, iXCount, iYCount;
             int width1=512, height1=512;
             int[] iiX = new int[256], iiY = new int[256], iiCode = new int[256], iiColor = new int[256], iiIndex = new int[256];
@@ -574,7 +574,7 @@ namespace mame
                 baseoffset += baseadd;
             }
             return;
-            nSprite = lX.Count;
+            /*nSprite = lX.Count;
             if (nSprite == 0)
             {
                 return;
@@ -677,7 +677,7 @@ namespace mame
                             }
                         }
                     }
-                }*/
+                }
                 if (lFlip[iSprite] == 0)
                 {
                     g.DrawImage(bm2, new Rectangle(lX[iSprite] - minX, 16 * nY - maxY2 + lY[iSprite], 16 * lXCount[iSprite], 16 * lYCount[iSprite]), new Rectangle(0, 0, 16 * lXCount[iSprite], 16 * lYCount[iSprite]), GraphicsUnit.Pixel);
@@ -730,7 +730,7 @@ namespace mame
                 iXAll += bm1.Width;
                 Machine.FORM.cpsform.pictureBox1.Image = bmAll;
             }
-            //CPS1.c1.FORM.cps1form.pictureBox1.Image = bm1;
+            //CPS1.c1.FORM.cps1form.pictureBox1.Image = bm1;*/
         }
         private static void cps2_render_sprites()
         {

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using System.Drawing;
-using System.Drawing.Imaging;
+//using System.Drawing;
+//using System.Drawing.Imaging;
 using System.IO;
 
 namespace mame
@@ -47,14 +47,14 @@ namespace mame
         public static int fullwidth, fullheight;
         public static bool global_throttle;
         public static int scanline_param;
-        private static Bitmap bitmapGDI;
-        private static Bitmap[] bbmp;
+        //private static Bitmap bitmapGDI;
+      // private static Bitmap[] bbmp;
         //public static RECT new_clip;
         public static int curbitmap;
         public static string sDrawText;
         public static long popup_text_end;
         public static int iMode, nMode;
-        private static BitmapData bitmapData;
+       // private static BitmapData bitmapData;
         public static int offsetx, offsety, width, height;
         public delegate void video_delegate();
         public static video_delegate video_update_callback, video_eof_callback;
@@ -95,15 +95,15 @@ namespace mame
                     fullheight = 0x200;
                     frame_update_time = new Atime(0, (long)(1e18 / 59.61));//59.61Hz
                     screenstate.vblank_period = 0;
-                    bitmapGDI = new Bitmap(Video.fullwidth, Video.fullheight);
+         //           bitmapGDI = new Bitmap(Video.fullwidth, Video.fullheight);
                    // UI.ui_update_callback = UI.ui_updateC;
                     bitmapbase = new ushort[2][];
                     bitmapbase[0] = new ushort[0x200 * 0x200];
                     bitmapbase[1] = new ushort[0x200 * 0x200];
-                    bbmp = new Bitmap[3];
-                    bbmp[0] = new Bitmap(512, 512);
-                    bbmp[1] = new Bitmap(512, 256);
-                    bbmp[2] = new Bitmap(384, 224);
+          //          bbmp = new Bitmap[3];
+          //          bbmp[0] = new Bitmap(512, 512);
+          //          bbmp[1] = new Bitmap(512, 256);
+          //          bbmp[2] = new Bitmap(384, 224);
                     video_update_callback = CPS.video_update_cps1;
                     video_eof_callback = CPS.video_eof_cps1;
                     break;
@@ -259,7 +259,7 @@ namespace mame
             screenstate.scantime = screenstate.frame_period / screenstate.height;
             screenstate.pixeltime = screenstate.frame_period / (screenstate.height * screenstate.width);
             screenstate.frame_number = 0;
-            bitmapGDI = new Bitmap(Video.fullwidth, Video.fullheight);
+         //   bitmapGDI = new Bitmap(Video.fullwidth, Video.fullheight);
             bitmapcolor = new int[Video.fullwidth * Video.fullheight];
             vblank_begin_timer = Timer.timer_alloc_common(vblank_begin_callback, "vblank_begin_callback", false);
             Timer.timer_adjust_periodic(vblank_begin_timer, frame_update_time, Attotime.ATTOTIME_NEVER);

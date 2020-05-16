@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+//using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -110,7 +110,7 @@ namespace ui
                 for (int i = 0; i < rowCount; i++)
                 {
                     this.listView1.Items[i].UseItemStyleForSubItems = false;
-                    this.listView1.Items[i].SubItems[currentCol].BackColor = Color.White;
+                    //this.listView1.Items[i].SubItems[currentCol].BackColor = Color.White;
                     if (e.Column != currentCol)
                         this.listView1.Columns[currentCol].Text = this.listView1.Columns[currentCol].Text.TrimEnd((char)0x25bc, (char)0x25b2, ' ');
                 }
@@ -118,7 +118,7 @@ namespace ui
             for (int i = 0; i < rowCount; i++)
             {
                 this.listView1.Items[i].UseItemStyleForSubItems = false;
-                this.listView1.Items[i].SubItems[e.Column].BackColor = Color.WhiteSmoke;
+               // this.listView1.Items[i].SubItems[e.Column].BackColor = Color.WhiteSmoke;
                 currentCol = e.Column;
             }
         }
