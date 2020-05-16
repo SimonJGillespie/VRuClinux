@@ -49,8 +49,8 @@ namespace mame
         {
             address &= 0xffffff;
             sbyte result = 0;
-            m68000Form.iRAddress = address;
-            m68000Form.iROp = 0x02;
+            //m68000Form.iRAddress = address;
+            //m68000Form.iROp = 0x02;
             if (Console.KeyAvailable && !serlatch)
             {
                 Cpuint.cpunum_set_input_line(0, 2, LineState.HOLD_LINE);
@@ -144,8 +144,8 @@ namespace mame
         {
             address &= 0xffffff;
             short result = 0;
-            m68000Form.iRAddress = address;
-            m68000Form.iROp = 0x03;
+            //m68000Form.iRAddress = address;
+            //m68000Form.iROp = 0x03;
             if (address <= 0x077fff)
             {
                 if (address + 1 < Memory.mainrom.Length)
@@ -171,8 +171,8 @@ namespace mame
         {
             address &= 0xffffff;
             short result = 0;
-            m68000Form.iRAddress = address;
-            m68000Form.iROp = 0x04;
+            //m68000Form.iRAddress = address;
+          //  m68000Form.iROp = 0x04;
             if (address <= 0x077fff)
             {
                 if (address + 1 < Memory.mainrom.Length)
@@ -223,8 +223,8 @@ namespace mame
         {
             address &= 0xffffff;
             int result = 0;
-            m68000Form.iRAddress = address;
-            m68000Form.iROp = 0x05;
+            //m68000Form.iRAddress = address;
+        //    m68000Form.iROp = 0x05;
             if (address <= 0x077fff)
             {
                 /*if (Timer.global_basetime.attoseconds == 0)
@@ -256,8 +256,8 @@ namespace mame
         {
             address &= 0xffffff;
             int result = 0;
-            m68000Form.iRAddress = address;
-            m68000Form.iROp = 0x06;
+          //  m68000Form.iRAddress = address;
+          //  m68000Form.iROp = 0x06;
             if (address <= 0x077fff)
             {
                 if (address + 3 < Memory.mainrom.Length)
@@ -299,8 +299,8 @@ namespace mame
         public static void MCWriteByte(int address, sbyte value)
         {
             address &= 0xffffff;
-            m68000Form.iWAddress = address;
-            m68000Form.iWOp = 0x01;
+         //   m68000Form.iWAddress = address;
+         //   m68000Form.iWOp = 0x01;
             if (address >= 0x800030 && address <= 0x800037)
             {
                 if (address % 2 == 0)
@@ -375,8 +375,8 @@ namespace mame
         public static void MCWriteWord(int address, short value)
         {
             address &= 0xffffff;
-            m68000Form.iWAddress = address;
-            m68000Form.iWOp = 0x02;
+         //   m68000Form.iWAddress = address;
+         //   m68000Form.iWOp = 0x02;
             if (address >= 0x800030 && address + 1 <= 0x800037)
             {
                 return;
@@ -444,8 +444,8 @@ namespace mame
         public static void MCWriteLong(int address, int value)
         {
             address &= 0xffffff;
-            m68000Form.iWAddress = address;
-            m68000Form.iWOp = 0x03;
+        //    m68000Form.iWAddress = address;
+         //   m68000Form.iWOp = 0x03;
             if (address >= 0x800030 && address + 3 <= 0x800037)
             {
                 return;

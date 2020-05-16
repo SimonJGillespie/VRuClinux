@@ -25,7 +25,7 @@ namespace ui
         //public cheatForm cheatform;
         //private cheatsearchForm cheatsearchform;
         //private ipsForm ipsform;        
-        public m68000Form m68000form;
+    //    public m68000Form m68000form;
        // public z80Form z80form;
         //public m6809Form m6809form;
         //public cpsForm cpsform;
@@ -72,10 +72,10 @@ namespace ui
                 this.LoadRom();
                 if (Machine.bRom)
                 {
-                    m68000Form.iStatus = 0;
-                    m68000Form.iRAddress = 0;
-                    m68000Form.iROp = 0;
-                    m68000Form.iValue = 0;
+                    //m68000Form.iStatus = 0;
+               //     m68000Form.iRAddress = 0;
+              //      m68000Form.iROp = 0;
+              //      m68000Form.iValue = 0;
                     //z80Form.iStatus = 0;
                     Mame.exit_pending = false;
                     this.resetToolStripMenuItem.Enabled = true;
@@ -341,7 +341,7 @@ namespace ui
         }
         private void InitM68000Form()
         {
-            m68000form = new m68000Form(this);
+           // m68000form = new m68000Form(this);
         }
         private void InitZ80Form()
         {
@@ -558,7 +558,7 @@ namespace ui
         }
         private void m68000ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m68000form.Show();
+            //m68000form.Show();
         }
         private void z80ToolStripMenuItem_Click(object sender, EventArgs e)
         {

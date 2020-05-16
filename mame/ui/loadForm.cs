@@ -72,10 +72,10 @@ namespace ui
                 this._myParentForm.LoadRom();
                 if (Machine.bRom)
                 {
-                    m68000Form.iStatus = 0;
-                    m68000Form.iRAddress = 0;
-                    m68000Form.iROp = 0;
-                    m68000Form.iValue = 0;
+           //         m68000Form.iStatus = 0;
+           //         m68000Form.iRAddress = 0;
+           //         m68000Form.iROp = 0;
+            //        m68000Form.iValue = 0;
                     //z80Form.iStatus = 0;
                     Mame.exit_pending = false;
                     this._myParentForm.resetToolStripMenuItem.Enabled = true;

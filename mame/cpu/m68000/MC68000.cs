@@ -234,11 +234,11 @@ namespace cpu.m68000
                 {
                     int prevCycles = pendingCycles;                    
                     PPC = PC;
-                    debugger_start_cpu_hook_callback();
+                    //debugger_start_cpu_hook_callback();
                     op = (ushort)ReadOpWord(PC); PC += 2;
                     Opcodes[op]();
                     m68ki_check_interrupts();
-                    debugger_stop_cpu_hook_callback();
+                    //debugger_stop_cpu_hook_callback();
                     int delta = prevCycles - pendingCycles;
                     totalExecutedCycles += (ulong)delta;                    
                 }
