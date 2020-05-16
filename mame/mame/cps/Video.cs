@@ -147,17 +147,17 @@ namespace mame
             if (scroll1 != cps1_base(CPS1_SCROLL1_BASE, 0x4000))
             {
                 scroll1 = cps1_base(CPS1_SCROLL1_BASE, 0x4000);
-                ttmap[0].all_tiles_dirty = true;
+                //ttmap[0].all_tiles_dirty = true;
             }
             if (scroll2 != cps1_base(CPS1_SCROLL2_BASE, 0x4000))
             {
                 scroll2 = cps1_base(CPS1_SCROLL2_BASE, 0x4000);
-                ttmap[1].all_tiles_dirty = true;
+                //ttmap[1].all_tiles_dirty = true;
             }
             if (scroll3 != cps1_base(CPS1_SCROLL3_BASE, 0x4000))
             {
                 scroll3 = cps1_base(CPS1_SCROLL3_BASE, 0x4000);
-                ttmap[2].all_tiles_dirty = true;
+                //ttmap[2].all_tiles_dirty = true;
             }
             if (bootleg_kludge == 1)
             {
@@ -183,21 +183,21 @@ namespace mame
             scroll2y = cps_a_regs[CPS1_SCROLL2_SCROLLY];
             scroll3x = cps_a_regs[CPS1_SCROLL3_SCROLLX] + scroll3xoff;
             scroll3y = cps_a_regs[CPS1_SCROLL3_SCROLLY];
-            ttmap[0].rowscroll[0] = cps_a_regs[CPS1_SCROLL1_SCROLLX] + scroll1xoff;
-            ttmap[0].colscroll[0] = cps_a_regs[CPS1_SCROLL1_SCROLLX];
-            ttmap[1].rowscroll[0] = cps_a_regs[CPS1_SCROLL2_SCROLLX] + scroll1xoff;
-            ttmap[1].colscroll[0] = cps_a_regs[CPS1_SCROLL2_SCROLLX];
-            ttmap[2].rowscroll[0] = cps_a_regs[CPS1_SCROLL3_SCROLLX] + scroll1xoff;
-            ttmap[2].colscroll[0] = cps_a_regs[CPS1_SCROLL3_SCROLLX];
+            //ttmap[0].rowscroll[0] = cps_a_regs[CPS1_SCROLL1_SCROLLX] + scroll1xoff;
+            //ttmap[0].colscroll[0] = cps_a_regs[CPS1_SCROLL1_SCROLLX];
+            //ttmap[1].rowscroll[0] = cps_a_regs[CPS1_SCROLL2_SCROLLX] + scroll1xoff;
+            //ttmap[1].colscroll[0] = cps_a_regs[CPS1_SCROLL2_SCROLLX];
+            //ttmap[2].rowscroll[0] = cps_a_regs[CPS1_SCROLL3_SCROLLX] + scroll1xoff;
+            //ttmap[2].colscroll[0] = cps_a_regs[CPS1_SCROLL3_SCROLLX];
             stars1x = cps_a_regs[CPS1_STARS1_SCROLLX];
             stars1y = cps_a_regs[CPS1_STARS1_SCROLLY];
             stars2x = cps_a_regs[CPS1_STARS2_SCROLLX];
             stars2y = cps_a_regs[CPS1_STARS2_SCROLLY];
             layercontrol = cps_b_regs[layer_control / 2];
             videocontrol = cps_a_regs[CPS1_VIDEOCONTROL];
-            ttmap[0].enable = ((layercontrol & layer_enable_mask[0]) != 0);
-            ttmap[1].enable = ((layercontrol & layer_enable_mask[1]) != 0 && (videocontrol & 4) != 0);
-            ttmap[2].enable = ((layercontrol & layer_enable_mask[2]) != 0 && (videocontrol & 8) != 0);
+            //ttmap[0].enable = ((layercontrol & layer_enable_mask[0]) != 0);
+            //ttmap[1].enable = ((layercontrol & layer_enable_mask[1]) != 0 && (videocontrol & 4) != 0);
+            //ttmap[2].enable = ((layercontrol & layer_enable_mask[2]) != 0 && (videocontrol & 8) != 0);
             cps1_stars_enabled[0] = layercontrol & layer_enable_mask[3];
             cps1_stars_enabled[1] = layercontrol & layer_enable_mask[4];
         }
@@ -213,7 +213,7 @@ namespace mame
                 memindex %= 0x800;
                 row += memindex % 0x20;
                 col = memindex / 0x20;
-                ttmap[0].tilemap_mark_tile_dirty(row, col);
+                //ttmap[0].tilemap_mark_tile_dirty(row, col);
             }
             if (page == (cps_a_regs[CPS1_SCROLL2_BASE] & 0x3c0))
             {
@@ -222,7 +222,7 @@ namespace mame
                 memindex %= 0x400;
                 row += memindex % 0x10;
                 col = memindex / 0x10;
-                ttmap[1].tilemap_mark_tile_dirty(row, col);
+                //ttmap[1].tilemap_mark_tile_dirty(row, col);
             }
             if (page == (cps_a_regs[CPS1_SCROLL3_BASE] & 0x3c0))
             {
@@ -231,7 +231,7 @@ namespace mame
                 memindex %= 0x200;
                 row += memindex % 0x08;
                 col = memindex / 0x08;
-                ttmap[2].tilemap_mark_tile_dirty(row, col);
+                //ttmap[2].tilemap_mark_tile_dirty(row, col);
             }
         }
         private static void cps1_update_transmasks()
@@ -259,7 +259,7 @@ namespace mame
                     byte fgbits = (((mask >> pen) & 1) != 0) ? TILEMAP_PIXEL_TRANSPARENT : TILEMAP_PIXEL_LAYER0;
                     byte bgbits = (((0x8000 >> pen) & 1) != 0) ? TILEMAP_PIXEL_TRANSPARENT : TILEMAP_PIXEL_LAYER1;
                     byte layermask = (byte)(fgbits | bgbits);
-                    if (ttmap[0].pen_to_flags[group, pen] != layermask)
+                    /*if (ttmap[0].pen_to_flags[group, pen] != layermask)
                     {
                         ttmap[0].pen_to_flags[group, pen] = layermask;
                         ttmap[0].all_tiles_dirty = true;
@@ -273,7 +273,7 @@ namespace mame
                     {
                         ttmap[2].pen_to_flags[group, pen] = layermask;
                         ttmap[2].all_tiles_dirty = true;
-                    }
+                    }*/
                 }
             }
         }
@@ -284,7 +284,7 @@ namespace mame
             g.Clear(Color.Magenta);
             g.Dispose();
             int i;
-            ttmap[0].enable = true;
+            /*ttmap[0].enable = true;
             ttmap[1].enable = true;
             ttmap[2].enable = true;
             ttmap[0].all_tiles_dirty = true;
@@ -292,7 +292,7 @@ namespace mame
             ttmap[2].all_tiles_dirty = true;
             Array.Clear(ttmap[0].pen_to_flags, 0, 0x40);
             Array.Clear(ttmap[1].pen_to_flags, 0, 0x40);
-            Array.Clear(ttmap[2].pen_to_flags, 0, 0x40);
+            Array.Clear(ttmap[2].pen_to_flags, 0, 0x40);*/
             cps1_update_transmasks();
             for (i = 0; i < 0xc00; i++)
             {
@@ -857,8 +857,8 @@ namespace mame
                         sx = (sx - stars2x + (col & 0x1f)) & 0x1ff;
                         sy = ((sy - stars2y) & 0xff) + 0x100;
                         col = (int)(((col & 0xe0) >> 1) + (Video.screenstate.frame_number / 16 & 0x0f));
-                        if (sx >= Video.screenstate.visarea.min_x && sx <= Video.screenstate.visarea.max_x && sy >= Video.screenstate.visarea.min_y && sy <= Video.screenstate.visarea.max_y)
-                            Video.bitmapbase[Video.curbitmap][sy * 0x200 + sx] = (ushort)(0xa00 + col);
+                        //if (sx >= Video.screenstate.visarea.min_x && sx <= Video.screenstate.visarea.max_x && sy >= Video.screenstate.visarea.min_y && sy <= Video.screenstate.visarea.max_y)
+                          //  Video.bitmapbase[Video.curbitmap][sy * 0x200 + sx] = (ushort)(0xa00 + col);
                     }
                 }
             }
@@ -874,8 +874,8 @@ namespace mame
                         sx = (sx - stars1x + (col & 0x1f)) & 0x1ff;
                         sy = ((sy - stars1y) & 0xff) + 0x100;
                         col = (int)(((col & 0xe0) >> 1) + (Video.screenstate.frame_number / 16 & 0x0f));
-                        if (sx >= Video.screenstate.visarea.min_x && sx <= Video.screenstate.visarea.max_x && sy >= Video.screenstate.visarea.min_y && sy <= Video.screenstate.visarea.max_y)
-                            Video.bitmapbase[Video.curbitmap][sy * 0x200 + sx] = (ushort)(0x800 + col);
+                       // if (sx >= Video.screenstate.visarea.min_x && sx <= Video.screenstate.visarea.max_x && sy >= Video.screenstate.visarea.min_y && sy <= Video.screenstate.visarea.max_y)
+                          //  Video.bitmapbase[Video.curbitmap][sy * 0x200 + sx] = (ushort)(0x800 + col);
                     }
                 }
             }
@@ -888,13 +888,13 @@ namespace mame
                     cps1_render_sprites();
                     break;
                 case 1:
-                    ttmap[0].tilemap_draw_primask(Tilemap.videovisarea, 0x20, 0);
+                    //ttmap[0].tilemap_draw_primask(Tilemap.videovisarea, 0x20, 0);
                     break;
                 case 2:
-                    ttmap[1].tilemap_draw_primask(Tilemap.videovisarea, 0x20, 0);
+                    //ttmap[1].tilemap_draw_primask(Tilemap.videovisarea, 0x20, 0);
                     break;
                 case 3:
-                    ttmap[2].tilemap_draw_primask(Tilemap.videovisarea, 0x20, 0);
+                    //ttmap[2].tilemap_draw_primask(Tilemap.videovisarea, 0x20, 0);
                     break;
             }
         }
@@ -906,13 +906,13 @@ namespace mame
                     cps1_render_sprites();
                     break;
                 case 1:
-                    ttmap[0].tilemap_draw_primask(Tilemap.videovisarea, 0x20, primask);
+                    //ttmap[0].tilemap_draw_primask(Tilemap.videovisarea, 0x20, primask);
                     break;
                 case 2:
-                    ttmap[1].tilemap_draw_primask(Tilemap.videovisarea, 0x20, primask);
+                    //ttmap[1].tilemap_draw_primask(Tilemap.videovisarea, 0x20, primask);
                     break;
                 case 3:
-                    ttmap[2].tilemap_draw_primask(Tilemap.videovisarea, 0x20, primask);
+                    //ttmap[2].tilemap_draw_primask(Tilemap.videovisarea, 0x20, primask);
                     break;
             }
         }
@@ -923,13 +923,13 @@ namespace mame
                 case 0:
                     break;
                 case 1:
-                    ttmap[0].tilemap_draw_primask4(Tilemap.videovisarea);
+                    //ttmap[0].tilemap_draw_primask4(Tilemap.videovisarea);
                     break;
                 case 2:
-                    ttmap[1].tilemap_draw_primask4(Tilemap.videovisarea);
+                    //ttmap[1].tilemap_draw_primask4(Tilemap.videovisarea);
                     break;
                 case 3:
-                    ttmap[2].tilemap_draw_primask4(Tilemap.videovisarea);
+                    //ttmap[2].tilemap_draw_primask4(Tilemap.videovisarea);
                     break;
             }
         }
@@ -946,34 +946,34 @@ namespace mame
             cps1_get_video_base();
             cps1_find_last_sprite();
             cps1_update_transmasks();
-            ttmap[0].tilemap_set_scrollx(0, scroll1x);
-            ttmap[0].tilemap_set_scrolly(0, scroll1y);
+            //ttmap[0].tilemap_set_scrollx(0, scroll1x);
+            //ttmap[0].tilemap_set_scrolly(0, scroll1y);
             if ((videocontrol & 0x01)!=0)	/* linescroll enable */
             {
                 int scrly = -scroll2y;
                 int otheroffs;
-                ttmap[1].scrollrows = 1024;
+                //ttmap[1].scrollrows = 1024;
                 otheroffs = cps_a_regs[CPS1_ROWSCROLL_OFFS];
                 for (i = 0; i < 0x400; i++)//0x100
                 {
-                    ttmap[1].tilemap_set_scrollx((i - scrly) & 0x3ff, scroll2x + gfxram[(other + ((otheroffs + i) & 0x3ff)) * 2] * 0x100 + gfxram[(other + ((otheroffs + i) & 0x3ff)) * 2 + 1]);
+                    //ttmap[1].tilemap_set_scrollx((i - scrly) & 0x3ff, scroll2x + gfxram[(other + ((otheroffs + i) & 0x3ff)) * 2] * 0x100 + gfxram[(other + ((otheroffs + i) & 0x3ff)) * 2 + 1]);
                 }
             }
             else
             {
-                ttmap[1].scrollrows = 1;               
-                ttmap[1].tilemap_set_scrollx(0, scroll2x);
+                //ttmap[1].scrollrows = 1;               
+                //ttmap[1].tilemap_set_scrollx(0, scroll2x);
             }
-            ttmap[1].tilemap_set_scrolly(0, scroll2y);
-            ttmap[2].tilemap_set_scrollx(0, scroll3x);
-            ttmap[2].tilemap_set_scrolly(0, scroll3y);
+           // ttmap[1].tilemap_set_scrolly(0, scroll2y);
+           // ttmap[2].tilemap_set_scrollx(0, scroll3x);
+           // ttmap[2].tilemap_set_scrolly(0, scroll3y);
             Array.Copy(uuBFF, Video.bitmapbase[Video.curbitmap], 0x40000);
             cps1_render_stars();
             l0 = (layercontrol >> 0x06) & 03;
             l1 = (layercontrol >> 0x08) & 03;
             l2 = (layercontrol >> 0x0a) & 03;
             l3 = (layercontrol >> 0x0c) & 03;
-            Array.Clear(Tilemap.priority_bitmap, 0, 0x40000);
+            //Array.Clear(Tilemap.priority_bitmap, 0, 0x40000);
             if (cps_version == 1)
             {
                 if ((bootleg_kludge & 0x80) != 0)

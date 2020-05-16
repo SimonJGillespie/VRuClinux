@@ -14,7 +14,7 @@ namespace mame
     {
         public int width;					/* current width (HTOTAL) */
         public int height;					/* current height (VTOTAL) */
-        public RECT visarea;    			/* current visible area (HBLANK end/start, VBLANK end/start) */
+        //public RECT visarea;    			/* current visible area (HBLANK end/start, VBLANK end/start) */
         public int last_partial_scan;       /* scanline of last partial update */
         public long frame_period;			/* attoseconds per frame */
         public long vblank_period;			/* attoseconds per VBLANK period */
@@ -49,7 +49,7 @@ namespace mame
         public static int scanline_param;
         private static Bitmap bitmapGDI;
         private static Bitmap[] bbmp;
-        public static RECT new_clip;
+        //public static RECT new_clip;
         public static int curbitmap;
         public static string sDrawText;
         public static long popup_text_end;
@@ -87,10 +87,10 @@ namespace mame
                 //case "CPS-1(QSound)":
                     screenstate.width = 0x200;
                     screenstate.height = 0x100;
-                    screenstate.visarea.min_x = 0;
-                    screenstate.visarea.max_x = 0x1ff;
-                    screenstate.visarea.min_y = 0;
-                    screenstate.visarea.max_y = 0x1ff;
+                    //screenstate.visarea.min_x = 0;
+                    //screenstate.visarea.max_x = 0x1ff;
+                    //screenstate.visarea.min_y = 0;
+                    //screenstate.visarea.max_y = 0x1ff;
                     fullwidth = 0x200;
                     fullheight = 0x200;
                     frame_update_time = new Atime(0, (long)(1e18 / 59.61));//59.61Hz
@@ -289,7 +289,7 @@ namespace mame
             screenstate.vblank_start_time = Attotime.ATTOTIME_ZERO;
 
         }
-        public static bool video_screen_update_partial(int scanline)
+        /*public static bool video_screen_update_partial(int scanline)
         {
             new_clip = screenstate.visarea;
             bool result = false;	
@@ -308,20 +308,20 @@ namespace mame
             }
             screenstate.last_partial_scan = scanline + 1;
             return result;
-        }
-        public static int video_screen_get_vpos()
+        }*/
+        /*public static int video_screen_get_vpos()
         {
             long delta = Attotime.attotime_to_attoseconds(Attotime.attotime_sub(Timer.get_current_time(), screenstate.vblank_start_time));
             int vpos;
             delta += screenstate.pixeltime / 2;
             vpos = (int)(delta / screenstate.scantime);
             return (screenstate.visarea.max_y + 1 + vpos) % screenstate.height;
-        }
+        }*/
         public static Atime video_screen_get_time_until_pos(int vpos, int hpos)
         {
             long curdelta = Attotime.attotime_to_attoseconds(Attotime.attotime_sub(Timer.get_current_time(), screenstate.vblank_start_time));
             long targetdelta;
-            vpos += screenstate.height - (screenstate.visarea.max_y + 1);
+            //vpos += screenstate.height - (screenstate.visarea.max_y + 1);
             vpos %= screenstate.height;
             targetdelta = vpos * screenstate.scantime + hpos * screenstate.pixeltime;
             if (targetdelta <= curdelta + screenstate.pixeltime / 2)
@@ -355,7 +355,7 @@ namespace mame
             screenstate.last_partial_scan = 0;
             Timer.timer_adjust_periodic(scanline0_timer, video_screen_get_time_until_pos(0, 0), Attotime.ATTOTIME_NEVER);
         }
-        public static void scanline_update_callback()
+        /*public static void scanline_update_callback()
         {
             int scanline = scanline_param;
             video_screen_update_partial(scanline);
@@ -366,7 +366,7 @@ namespace mame
             }
             scanline_param=scanline;
             Timer.timer_adjust_periodic(scanline_timer, video_screen_get_time_until_pos(scanline, 0), Attotime.ATTOTIME_NEVER);
-        }
+        }*/
         public static void video_frame_update()
         {
             Mame.paused = false;
@@ -399,7 +399,7 @@ namespace mame
         }
         private static void finish_screen_updates()
         {
-            video_screen_update_partial(screenstate.visarea.max_y);
+            //video_screen_update_partial(screenstate.visarea.max_y);
             curbitmap = 1 - curbitmap;
         }
         private static void update_throttle(Atime emutime)

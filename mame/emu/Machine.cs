@@ -24,7 +24,7 @@ namespace mame
                 case "CPS-1(QSound)":
                 case "CPS2":
                     Palette.palette_init();
-                    Tilemap.tilemap_init();
+                    //Tilemap.tilemap_init();
                     Eeprom.eeprom_init();
                     CPS.video_start_cps();
                     machine_reset_callback = CPS.machine_reset_cps;                    

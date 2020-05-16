@@ -406,7 +406,7 @@ namespace mame
                 case "CPS-1":
                     for (i = 0; i < 3; i++)
                     {
-                        CPS.ttmap[i].all_tiles_dirty = true;
+                        //CPS.ttmap[i].all_tiles_dirty = true;
                     }
                     //YM2151.ym2151_postload();
                     break;
@@ -414,7 +414,7 @@ namespace mame
                 case "CPS2":
                     for (i = 0; i < 3; i++)
                     {
-                        CPS.ttmap[i].all_tiles_dirty = true;
+                        //CPS.ttmap[i].all_tiles_dirty = true;
                     }
                     break;
                 /*case "Neo Geo":
