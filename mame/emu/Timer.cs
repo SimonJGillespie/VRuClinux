@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Text;
-using cpu.m6800;
+//using cpu.m6800;
 
 namespace mame
 {
@@ -58,11 +58,11 @@ namespace mame
                     }
                     else if (index == 32)
                     {
-                        action = M6800.action_rx;
+                        //action = M6800.action_rx;
                     }
                     else if (index == 33)
                     {
-                        action = M6800.action_tx;
+                        //action = M6800.action_tx;
                     }
                     else if (index == 39)
                     {
@@ -132,8 +132,8 @@ namespace mame
             lt2.Add(new emu_timer2(29, YM2610.timer_callback_0, "timer_callback_0"));
             lt2.Add(new emu_timer2(30, YM2610.timer_callback_1, "timer_callback_1"));
 
-            lt2.Add(new emu_timer2(32, M6800.action_rx, "m6800_rx_tick"));
-            lt2.Add(new emu_timer2(33, M6800.action_tx, "m6800_tx_tick"));
+            //lt2.Add(new emu_timer2(32, M6800.action_rx, "m6800_rx_tick"));
+            //lt2.Add(new emu_timer2(33, M6800.action_tx, "m6800_tx_tick"));
             lt2.Add(new emu_timer2(34, YM3812.timer_callback_3812_0, "timer_callback_3812_0"));
             lt2.Add(new emu_timer2(35, YM3812.timer_callback_3812_1, "timer_callback_3812_1"));
             lt2.Add(new emu_timer2(36, ICS2115.timer_cb_0, "timer_cb_0"));
@@ -487,9 +487,9 @@ namespace mame
                     lt.Remove(lt[i]);
                     lt.Add(YM2610.timer1);
                 }
-                else if (lt[i].func == "m6800_rx_tick")
+                /*else if (lt[i].func == "m6800_rx_tick")
                 {
-                    M6800.m1.m6800_rx_timer = lt[i];
+                    /*M6800.m1.m6800_rx_timer = lt[i];
                     lt.Remove(lt[i]);
                     lt.Add(M6800.m1.m6800_rx_timer);
                 }
@@ -498,7 +498,7 @@ namespace mame
                     M6800.m1.m6800_tx_timer = lt[i];
                     lt.Remove(lt[i]);
                     lt.Add(M6800.m1.m6800_tx_timer);
-                }
+                }*/
                 else if (lt[i].func == "timer_callback_3812_0")
                 {
                     YM3812.timer[0] = lt[i];

@@ -6,9 +6,9 @@ using System.IO;
 using System.Windows.Forms;
 using cpu.m68000;
 using cpu.z80;
-using cpu.m6800;
-using cpu.m6809;
-using cpu.nec;
+//using cpu.m6800;
+// cpu.m6809;
+//using cpu.nec;
 using ui;
 
 namespace mame

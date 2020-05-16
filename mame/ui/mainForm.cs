@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 using Microsoft.DirectX.DirectSound;
 using DSDevice = Microsoft.DirectX.DirectSound.Device;
 using mame;
-using cpu.nec;
+//using cpu.nec;
 
 namespace ui
 {
