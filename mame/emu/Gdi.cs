@@ -10,14 +10,14 @@ namespace mame
 {
     partial class Video
     {        
-        public static void GDIDraw()
+        /*public static void GDIDraw()
         {
             try
             {
                 bitmapData = bitmapGDI.LockBits(new Rectangle(0, 0, Video.fullwidth, Video.fullheight), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
                 Marshal.Copy(Video.bitmapcolor, 0, bitmapData.Scan0, Video.fullwidth * Video.fullheight);
                 bitmapGDI.UnlockBits(bitmapData);
-                if (true /*Wintime.osd_ticks() < popup_text_end*/)
+                if (true Wintime.osd_ticks() < popup_text_end)
                 {
                     Machine.FORM.tsslStatus.Text = sDrawText;
                 }
@@ -65,6 +65,6 @@ namespace mame
             {
                 
             }
-        }
+        }*/
     }
 }

@@ -84,7 +84,7 @@ namespace mame
             switch (Machine.sBoard)
             {
                 case "CPS-1":
-                case "CPS-1(QSound)":
+                //case "CPS-1(QSound)":
                     screenstate.width = 0x200;
                     screenstate.height = 0x100;
                     screenstate.visarea.min_x = 0;
@@ -382,7 +382,7 @@ namespace mame
             {
                 Machine.FORM.cheatform.ApplyCheat();
             }*/
-            GDIDraw();
+            //GDIDraw();
             if (effective_throttle())
             {
                 update_throttle(current_time);
