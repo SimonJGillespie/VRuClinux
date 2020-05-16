@@ -24,7 +24,7 @@ namespace mame
                     CPS.short1 = -1;
                     CPS.short2 = -1;
                     break;
-                case "Neo Geo":
+                /*case "Neo Geo":
                     Neogeo.short0 = unchecked((short)0xff00);
                     Neogeo.short1 = -1;
                     Neogeo.short2 = -1;
@@ -68,7 +68,7 @@ namespace mame
                     M92.ushort0 = 0xffff;
                     M92.ushort1 = 0xff7f;
                     M92.ushort2 = 0xffff;
-                    break;
+                    break;*/
             }
         }
         public static void memory_reset2()
@@ -87,7 +87,7 @@ namespace mame
                     CPS.short1_old = 0;
                     CPS.short2_old = 0;
                     break;
-                case "Neo Geo":
+                /*case "Neo Geo":
                     Neogeo.short0_old = 0;
                     Neogeo.short1_old = 0;
                     Neogeo.short2_old = 0;
@@ -120,7 +120,7 @@ namespace mame
                     M92.ushort0_old = 0;
                     M92.ushort1_old = 0;
                     M92.ushort2_old = 0;
-                    break;
+                    break;*/
             }
         }
     }

@@ -69,9 +69,6 @@ C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\bin\Debug\Microsoft.DirectX
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\bin\Debug\Microsoft.DirectX.DirectInput.xml
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\bin\Debug\Microsoft.DirectX.DirectSound.xml
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\mame.csprojAssemblyReference.cache
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.aboutForm.resources
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.cheatForm.resources
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.cheatsearchForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.cpsForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.ListViewControl.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.loadForm.resources

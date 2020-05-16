@@ -29,7 +29,7 @@ namespace mame
                     CPS.video_start_cps();
                     machine_reset_callback = CPS.machine_reset_cps;                    
                     break;
-                case "Neo Geo":
+                /*case "Neo Geo":
                     Neogeo.nvram_handler_load_neogeo();
                     Neogeo.machine_start_neogeo();
                     Neogeo.video_start_neogeo();                    
@@ -75,7 +75,7 @@ namespace mame
                     M92.machine_start_m92();
                     M92.video_start_m92();
                     machine_reset_callback = M92.machine_reset_m92;
-                    break;
+                    break;*/
             }
         }
         public static byte[] GetNeogeoRom(string sFile)

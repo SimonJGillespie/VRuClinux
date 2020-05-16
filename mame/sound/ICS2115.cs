@@ -70,7 +70,7 @@ namespace mame
             if (irq != irq_on)
             {
                 irq_on = irq;
-                PGM.sound_irq(irq ? (int)LineState.ASSERT_LINE : (int)LineState.CLEAR_LINE);
+                //PGM.sound_irq(irq ? (int)LineState.ASSERT_LINE : (int)LineState.CLEAR_LINE);
             }
         }
         public static void ics2115_update(int offset, int length)

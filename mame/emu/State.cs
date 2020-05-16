@@ -29,7 +29,7 @@ namespace mame
                     savestate_callback = CPS.SaveStateBinaryC2;
                     loadstate_callback = CPS.LoadStateBinaryC2;
                     break;
-                case "Neo Geo":
+                /*case "Neo Geo":
                     savestate_callback = Neogeo.SaveStateBinary;
                     loadstate_callback = Neogeo.LoadStateBinary;
                     break;
@@ -52,7 +52,7 @@ namespace mame
                 case "M92":
                     savestate_callback = M92.SaveStateBinary;
                     loadstate_callback = M92.LoadStateBinary;
-                    break;
+                    break;*/
             }
         }
     }

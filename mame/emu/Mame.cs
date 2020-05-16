@@ -417,7 +417,7 @@ namespace mame
                         CPS.ttmap[i].all_tiles_dirty = true;
                     }
                     break;
-                case "Neo Geo":
+                /*case "Neo Geo":
                     Neogeo.regenerate_pens();
                     FM.ym2610_postload();
                     break;
@@ -444,7 +444,7 @@ namespace mame
                         M92.pf_layer[i].tmap.all_tiles_dirty = true;
                         M92.pf_layer[i].wide_tmap.all_tiles_dirty = true;
                     }
-                    break;
+                    break;*/
             }
         }
     }

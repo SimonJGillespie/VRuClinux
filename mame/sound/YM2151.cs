@@ -968,7 +968,7 @@ namespace mame
                 case "CPS-1":
                     PSG.irqhandler = Cpuint.cps1_irq_handler_mus;
                     break;
-                case "Namco System 1":
+                /*case "Namco System 1":
                     PSG.irqhandler = Cpuint.namcos1_sound_interrupt;
                     break;
                 case "M72":
@@ -976,7 +976,7 @@ namespace mame
                     break;
                 case "M92":
                     PSG.irqhandler = M92.sound_irq;
-                    break;
+                    break;*/
             }
         }
         public static void ym2151_reset_chip()

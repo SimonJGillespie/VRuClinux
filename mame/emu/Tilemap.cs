@@ -283,7 +283,7 @@ namespace mame
                 case "CPS2":
                     CPS.tilemap_init();
                     break;
-                case "Namco System 1":                    
+                /*case "Namco System 1":                    
                     Namcos1.tilemap_init();
                     break;
                 case "PGM":
@@ -294,7 +294,7 @@ namespace mame
                     break;
                 case "M92":
                     M92.tilemap_init();
-                    break;
+                    break;*/
             }
             screen_width = 0x200;
             screen_height = 0x200;

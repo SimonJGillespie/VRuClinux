@@ -109,7 +109,7 @@ namespace mame
                     analog_p0.scaleneg = 0x8000;
                     analog_p1.scaleneg = 0x8000;
                     break;
-                case "Neo Geo":
+                /*case "Neo Geo":
                     loop_inputports_callback = Neogeo.loop_inputports_neogeo_standard;
                     record_port_callback = Neogeo.record_port;
                     replay_port_callback = Neogeo.replay_port;
@@ -178,7 +178,7 @@ namespace mame
                     loop_inputports_callback = M92.loop_inputports_m92_common;
                     record_port_callback = M92.record_port;
                     replay_port_callback = M92.replay_port;
-                    break;
+                    break;*/
             }
             switch (Machine.sName)
             {
@@ -221,7 +221,7 @@ namespace mame
                     loop_inputports_callback = CPS.loop_inputports_cps2_qndream;
                     break;
                 case "irrmaze":
-                    loop_inputports_callback = Neogeo.loop_inputports_neogeo_irrmaze;
+                    //loop_inputports_callback = Neogeo.loop_inputports_neogeo_irrmaze;
                     break;
                 case "quester":
                 case "questers":

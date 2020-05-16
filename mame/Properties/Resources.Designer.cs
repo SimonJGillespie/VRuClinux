@@ -19,7 +19,7 @@ namespace mame.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,32 +61,12 @@ namespace mame.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] _000_lo {
-            get {
-                object obj = ResourceManager.GetObject("_000_lo", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap _1 {
             get {
                 object obj = ResourceManager.GetObject("_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] mainbios {
-            get {
-                object obj = ResourceManager.GetObject("mainbios", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         
@@ -127,36 +107,6 @@ namespace mame.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] pgmaudiobios {
-            get {
-                object obj = ResourceManager.GetObject("pgmaudiobios", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] pgmmainbios {
-            get {
-                object obj = ResourceManager.GetObject("pgmmainbios", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] pgmvideobios {
-            get {
-                object obj = ResourceManager.GetObject("pgmvideobios", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Detail: https://www.codeproject.com/Articles/1275365/MAME-NET
         ///You should install Microsoft .NET Framework 3.5 or higher before running the program. You should download MAME.NET ROM files in roms directory.
         ///Hotkey: F3 -- soft reset, F7 -- load state, Shift+F7 -- save state, F8 -- replay input, Shift+F8 -- record input (start and stop), 0-9 and A-Z after state related hotkey -- handle certain files, F10 -- toggle global throttle, P -- pause and continue, shift+P -- skip a frame.
@@ -165,26 +115,6 @@ namespace mame.Properties {
         internal static string readme {
             get {
                 return ResourceManager.GetString("readme", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] sfix {
-            get {
-                object obj = ResourceManager.GetObject("sfix", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] sm1 {
-            get {
-                object obj = ResourceManager.GetObject("sm1", resourceCulture);
-                return ((byte[])(obj));
             }
         }
     }

@@ -127,7 +127,7 @@
   <data name="readme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ui\readme.txt;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="mainbios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+<!--  <data name="mainbios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\mame\neogeo\mainbios.rom;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="sfix" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -138,11 +138,11 @@
   </data>
   <data name="_000_lo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\mame\neogeo\000-lo.lo;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  </data>-->
   <data name="mcu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\mame\namcos1\cus64-64a1.mcu;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pgmmainbios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+ <!-- <data name="pgmmainbios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\mame\pgm\mainbios.rom;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pgmvideobios" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -150,5 +150,5 @@
   </data>
   <data name="pgmaudiobios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\mame\pgm\pgm_m01s.rom;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  </data> -->
 </root>

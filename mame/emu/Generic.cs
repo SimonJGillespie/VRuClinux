@@ -59,7 +59,7 @@ namespace mame
             switch (Machine.sBoard)
             {
                 case "Neo Geo":
-                    Neogeo.nvram_handler_load_neogeo();
+                    //Neogeo.nvram_handler_load_neogeo();
                     break;
                 /*case "Namco System 1":
                     Namcos1.nvram_handler_load_namcos1();
@@ -71,7 +71,7 @@ namespace mame
             switch (Machine.sBoard)
             {
                 case "Neo Geo":
-                    Neogeo.nvram_handler_save_neogeo();
+                    //Neogeo.nvram_handler_save_neogeo();
                     break;
                 /*case "Namco System 1":
                     Namcos1.nvram_handler_save_namcos1();

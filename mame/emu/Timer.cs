@@ -125,10 +125,10 @@ namespace mame
             lt2.Add(new emu_timer2(21, Sound.latch_callback2, "latch_callback2"));
             lt2.Add(new emu_timer2(22, Sound.latch_callback3, "latch_callback3"));
             lt2.Add(new emu_timer2(23, Sound.latch_callback4, "latch_callback4"));
-            lt2.Add(new emu_timer2(24, Neogeo.display_position_interrupt_callback, "display_position_interrupt_callback"));
-            lt2.Add(new emu_timer2(25, Neogeo.display_position_vblank_callback, "display_position_vblank_callback"));
-            lt2.Add(new emu_timer2(26, Neogeo.vblank_interrupt_callback, "vblank_interrupt_callback"));
-            lt2.Add(new emu_timer2(27, Neogeo.auto_animation_timer_callback, "auto_animation_timer_callback"));
+            //lt2.Add(new emu_timer2(24, Neogeo.display_position_interrupt_callback, "display_position_interrupt_callback"));
+            //lt2.Add(new emu_timer2(25, Neogeo.display_position_vblank_callback, "display_position_vblank_callback"));
+            //lt2.Add(new emu_timer2(26, Neogeo.vblank_interrupt_callback, "vblank_interrupt_callback"));
+            //lt2.Add(new emu_timer2(27, Neogeo.auto_animation_timer_callback, "auto_animation_timer_callback"));
             lt2.Add(new emu_timer2(29, YM2610.timer_callback_0, "timer_callback_0"));
             lt2.Add(new emu_timer2(30, YM2610.timer_callback_1, "timer_callback_1"));
 
@@ -139,9 +139,9 @@ namespace mame
             lt2.Add(new emu_timer2(36, ICS2115.timer_cb_0, "timer_cb_0"));
             lt2.Add(new emu_timer2(37, ICS2115.timer_cb_1, "timer_cb_1"));
 
-            lt2.Add(new emu_timer2(38, M72.m72_scanline_interrupt, "m72_scanline_interrupt"));
+            //lt2.Add(new emu_timer2(38, M72.m72_scanline_interrupt, "m72_scanline_interrupt"));
             lt2.Add(new emu_timer2(39, setvector, "setvector_callback"));
-            lt2.Add(new emu_timer2(40, M92.m92_scanline_interrupt, "m92_scanline_interrupt"));
+            //lt2.Add(new emu_timer2(40, M92.m92_scanline_interrupt, "m92_scanline_interrupt"));
         }
         public static Atime get_current_time()
         {
@@ -451,7 +451,7 @@ namespace mame
                     lt.Remove(lt[i]);
                     lt.Add(Video.scanline0_timer);
                 }
-                else if (lt[i].func == "display_position_interrupt_callback")
+                /*else if (lt[i].func == "display_position_interrupt_callback")
                 {
                     Neogeo.display_position_interrupt_timer = lt[i];
                     lt.Remove(lt[i]);
@@ -474,7 +474,7 @@ namespace mame
                     Neogeo.auto_animation_timer = lt[i];
                     lt.Remove(lt[i]);
                     lt.Add(Neogeo.auto_animation_timer);
-                }
+                }*/
                 else if (lt[i].func == "timer_callback_0")
                 {
                     YM2610.timer0 = lt[i];
@@ -523,7 +523,7 @@ namespace mame
                     lt.Remove(lt[i]);
                     lt.Add(ICS2115.timer[1].timer);
                 }
-                else if (lt[i].func == "m72_scanline_interrupt")
+                /*else if (lt[i].func == "m72_scanline_interrupt")
                 {
                     M72.scanline_timer = lt[i];
                     lt.Remove(lt[i]);
@@ -534,7 +534,7 @@ namespace mame
                     M92.scanline_timer = lt[i];
                     lt.Remove(lt[i]);
                     lt.Add(M92.scanline_timer);
-                }
+                }*/
             }
             for (i = n; i < 32; i++)
             {
