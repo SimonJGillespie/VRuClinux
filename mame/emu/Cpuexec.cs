@@ -918,9 +918,9 @@ namespace mame
                     m68000Form.m68000State = m68000Form.M68000State.M68000_RUN;
                     MC68000.m1.debugger_start_cpu_hook_callback = Machine.FORM.m68000form.m68000_start_debug;
                     MC68000.m1.debugger_stop_cpu_hook_callback = Machine.FORM.m68000form.m68000_stop_debug;
-                    z80Form.z80State = z80Form.Z80AState.Z80A_RUN;
-                    Z80A.z1.debugger_start_cpu_hook_callback = Machine.FORM.z80form.z80_start_debug;
-                    Z80A.z1.debugger_stop_cpu_hook_callback = Machine.FORM.z80form.z80_stop_debug;
+                    //z80Form.z80State = z80Form.Z80AState.Z80A_RUN;
+                    //Z80A.z1.debugger_start_cpu_hook_callback = Machine.FORM.z80form.z80_start_debug;
+                    //Z80A.z1.debugger_stop_cpu_hook_callback = Machine.FORM.z80form.z80_stop_debug;
                     break;                
                 /*case "IGS011":
                     m68000Form.m68000State = m68000Form.M68000State.M68000_RUN;

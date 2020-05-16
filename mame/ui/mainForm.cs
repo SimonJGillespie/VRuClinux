@@ -26,7 +26,7 @@ namespace ui
         //private cheatsearchForm cheatsearchform;
         //private ipsForm ipsform;        
         public m68000Form m68000form;
-        public z80Form z80form;
+       // public z80Form z80form;
         //public m6809Form m6809form;
         //public cpsForm cpsform;
         //public neogeoForm neogeoform;
@@ -76,7 +76,7 @@ namespace ui
                     m68000Form.iRAddress = 0;
                     m68000Form.iROp = 0;
                     m68000Form.iValue = 0;
-                    z80Form.iStatus = 0;
+                    //z80Form.iStatus = 0;
                     Mame.exit_pending = false;
                     this.resetToolStripMenuItem.Enabled = true;
                     //this..gameStripMenuItem.Enabled = true;
@@ -345,7 +345,7 @@ namespace ui
         }
         private void InitZ80Form()
         {
-            z80form = new z80Form(this);
+           // z80form = new z80Form(this);
         }
         private void InitM6809Form()
         {
@@ -562,7 +562,7 @@ namespace ui
         }
         private void z80ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            z80form.Show();
+            //z80form.Show();
         }
         private void m6809ToolStripMenuItem_Click(object sender, EventArgs e)
         {

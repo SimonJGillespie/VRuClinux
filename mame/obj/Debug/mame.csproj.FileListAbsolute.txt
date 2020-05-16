@@ -69,12 +69,10 @@ C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\bin\Debug\Microsoft.DirectX
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\bin\Debug\Microsoft.DirectX.DirectInput.xml
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\bin\Debug\Microsoft.DirectX.DirectSound.xml
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\mame.csprojAssemblyReference.cache
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.cpsForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.ListViewControl.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.loadForm.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.m68000Form.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.mainForm.resources
-C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\ui.z80Form.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\mame.Properties.Resources.resources
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\mame.csproj.GenerateResource.cache
 C:\Users\Simon\Projects\VRuClinux\VRuClinuxRepo\mame\obj\Debug\mame.csproj.CoreCompileInputs.cache
