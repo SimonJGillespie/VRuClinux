@@ -10,7 +10,7 @@ namespace mame
     {
         public static void loop_inputports_cps1_6b()
         {
-            if (Keyboard.IsPressed(Key.D5))
+            /*if (Keyboard.IsPressed(Key.D5))
             {
                 sbyte0 &= ~0x01;
             }
@@ -1167,7 +1167,7 @@ namespace mame
             else
             {
                 short2 |= 0x0002;
-            }
+            }*/
         }
         public static void record_portC()
         {

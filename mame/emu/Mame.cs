@@ -148,7 +148,7 @@ namespace mame
             {
                 Video.sDrawText = "Select position to save to";
                 Video.popup_text_end = Wintime.osd_ticks() + Wintime.ticks_per_second * 1000;
-                if (Keyboard.IsTriggered(Key.Escape))
+                /*if (Keyboard.IsTriggered(Key.Escape))
                 {
                     Video.sDrawText = "Save cancelled";
                     Video.popup_text_end = Wintime.osd_ticks() + Wintime.ticks_per_second * 2;
@@ -180,7 +180,7 @@ namespace mame
                         mame_pause(false);
                         return;
                     }
-                }
+                }*/
             }
         }
         private static void handle_load()
@@ -198,7 +198,7 @@ namespace mame
             {
                 Video.sDrawText = "Select position to load from";
                 Video.popup_text_end = Wintime.osd_ticks() + Wintime.ticks_per_second * 1000;
-                if (Keyboard.IsTriggered(Key.Escape))
+                /*if (Keyboard.IsTriggered(Key.Escape))
                 {
                     Video.sDrawText = "Load cancelled";
                     Video.popup_text_end = Wintime.osd_ticks() + Wintime.ticks_per_second * 2;
@@ -206,11 +206,11 @@ namespace mame
                     mame_pause(false);
                     UI.ui_handler_callback = UI.handler_ingame;
                     return;
-                }
+                }*/
                 char file;
                 foreach (Key key1 in Inptport.lk)
                 {
-                    if (Keyboard.IsTriggered(key1))
+                    /*if (Keyboard.IsTriggered(key1))
                     {
                         file = Inptport.getcharbykey(key1);
                         if (!File.Exists("sta\\" + Machine.sName + "\\" + file + ".sta"))
@@ -236,7 +236,7 @@ namespace mame
                         Thread.Sleep(500);
                         mame_pause(false);
                         return;
-                    }
+                    }*/
                 }
             }
         }
@@ -257,7 +257,7 @@ namespace mame
                 {
                     Video.sDrawText = "Select position to record to";
                     Video.popup_text_end = Wintime.osd_ticks() + Wintime.ticks_per_second * 1000;
-                    if (Keyboard.IsTriggered(Key.Escape))
+                    /*if (Keyboard.IsTriggered(Key.Escape))
                     {
                         Video.sDrawText = "Record cancelled";
                         Video.popup_text_end = Wintime.osd_ticks() + Wintime.ticks_per_second * 2;
@@ -265,11 +265,11 @@ namespace mame
                         mame_pause(false);
                         UI.ui_handler_callback = UI.handler_ingame;
                         return;
-                    }                    
+                    } */                   
                     char file;
                     foreach (Key key1 in Inptport.lk)
                     {
-                        if (Keyboard.IsTriggered(key1))
+                        /*if (Keyboard.IsTriggered(key1))
                         {
                             file = Inptport.getcharbykey(key1);
                             if (!Directory.Exists("inp\\" + Machine.sName))
@@ -297,7 +297,7 @@ namespace mame
                             Thread.Sleep(500);
                             mame_pause(false);
                             return;
-                        }
+                        }*/
                     }
                 }
                 else if (playState == PlayState.PLAY_RECORDEND)
@@ -327,7 +327,7 @@ namespace mame
                 {
                     Video.sDrawText = "Select position to replay from";
                     Video.popup_text_end = Wintime.osd_ticks() + Wintime.ticks_per_second * 1000;
-                    if (Keyboard.IsTriggered(Key.Escape))
+                    /*if (Keyboard.IsTriggered(Key.Escape))
                     {
                         Video.sDrawText = "Replay cancelled";
                         Video.popup_text_end = Wintime.osd_ticks() + Wintime.ticks_per_second * 2;
@@ -335,11 +335,11 @@ namespace mame
                         mame_pause(false);
                         UI.ui_handler_callback = UI.handler_ingame;
                         return;
-                    }
+                    }*/
                     char file;
                     foreach (Key key1 in Inptport.lk)
                     {
-                        if (Keyboard.IsTriggered(key1))
+                        /*if (Keyboard.IsTriggered(key1))
                         {
                             file = Inptport.getcharbykey(key1);
                             if (!File.Exists("inp\\" + Machine.sName + "\\" + file + ".sta") || !File.Exists("inp\\" + Machine.sName + "\\" + file + ".inp"))
@@ -385,7 +385,7 @@ namespace mame
                             Thread.Sleep(500);
                             mame_pause(false);
                             return;
-                        }
+                        }*/
                     }
                 }
             }

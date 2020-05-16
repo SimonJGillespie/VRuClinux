@@ -104,7 +104,7 @@ namespace ui
             desc1.BufferBytes = 0x9400;
             desc1.ControlVolume = true;
             desc1.GlobalFocus = true;
-            Keyboard.InitializeInput(this);
+            //Keyboard.InitializeInput(this);
             //Sound.buf2 = new SecondaryBuffer(desc1, dev);
 
             InitLoadForm();
@@ -473,11 +473,11 @@ namespace ui
             Mame.exit_pending = true;
             Thread.Sleep(100);
             Generic.nvram_save();
-            if (Keyboard.dIDevice != null)
+            /*if (Keyboard.dIDevice != null)
             {
                 Keyboard.dIDevice.Dispose();
                 Keyboard.dIDevice = null;
-            }
+            }*/
             StreamWriter sw1 = new StreamWriter("mame.ini", false);
             sw1.WriteLine("[select]");
             sw1.WriteLine(sSelect);
@@ -588,11 +588,11 @@ namespace ui
             {
                 if (msg.WParam.ToString("X4") == "F100")
                 {
-                    if (Keyboard.bF10)
+                    /*if (Keyboard.bF10)
                     {
                         Keyboard.bF10 = false;
                         return;
-                    }
+                    }*/
                 }
             }
             // Pass message to default handler.

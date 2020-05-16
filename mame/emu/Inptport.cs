@@ -85,7 +85,7 @@ namespace mame
                     analog_p1.scaleneg = 0x8000;
                     break;
                 case "CPS2":
-                    loop_inputports_callback = CPS.loop_inputports_cps2_2p6b;
+                    //loop_inputports_callback = CPS.loop_inputports_cps2_2p6b;
                     record_port_callback = CPS.record_portC2;
                     replay_port_callback = CPS.replay_portC2;
                     analog_p0 = new analog_field_state();
@@ -191,7 +191,7 @@ namespace mame
                 case "forgottnuaa":
                 case "lostwrld":
                 case "lostwrldo":
-                    loop_inputports_callback = CPS.loop_inputports_cps1_forgottn;
+                    //loop_inputports_callback = CPS.loop_inputports_cps1_forgottn;
                     break;
                 case "sf2ebbl":
                 case "sf2ebbl2":
@@ -204,14 +204,14 @@ namespace mame
                 case "sf2m7":
                 case "sf2yyc":
                 case "sf2koryu":
-                    loop_inputports_callback = CPS.loop_inputports_cps1_sf2hack;
+                    //loop_inputports_callback = CPS.loop_inputports_cps1_sf2hack;
                     break;
                 case "cworld2j":
                 case "cworld2ja":
                 case "cworld2jb":
                 case "qad":
                 case "qadjr":
-                case "qtono2j":
+                /*case "qtono2j":
                     loop_inputports_callback = CPS.loop_inputports_cps1_cworld2j;
                     break;
                 case "ecofghtr":
@@ -219,7 +219,7 @@ namespace mame
                     break;
                 case "qndream":
                     loop_inputports_callback = CPS.loop_inputports_cps2_qndream;
-                    break;
+                    break;*/
                 case "irrmaze":
                     //loop_inputports_callback = Neogeo.loop_inputports_neogeo_irrmaze;
                     break;
@@ -349,7 +349,7 @@ namespace mame
                 int i1 = 1;
             }
             analog.previous = analog.accum = value2;
-            if (Keyboard.IsPressed(Key.K))
+            /*if (Keyboard.IsPressed(Key.K))
             {
                 keypressed = true;
                 delta -= analog_p0.delta * 0x200;
@@ -360,7 +360,7 @@ namespace mame
                 keypressed = true;
                 delta += analog_p0.delta * 0x200;
                 analog.lastdigital = 2;
-            }
+            }*/
             analog.accum += delta;
             if (!keypressed)
                 analog.lastdigital = 0;
@@ -376,7 +376,7 @@ namespace mame
                 int i1 = 1;
             }
             analog.previous = analog.accum = value2;
-            if (Keyboard.IsPressed(Key.NumPad2))
+            /*if (Keyboard.IsPressed(Key.NumPad2))
             {
                 keypressed = true;
                 delta -= analog_p0.delta * 0x200;
@@ -387,7 +387,7 @@ namespace mame
                 keypressed = true;
                 delta += analog_p0.delta * 0x200;
                 analog.lastdigital = 2;
-            }
+            }*/
             analog.accum += delta;
             if (!keypressed)
                 analog.lastdigital = 0;
@@ -403,7 +403,7 @@ namespace mame
                 int i1 = 1;
             }
             analog.previous = analog.accum = value2;
-            if (Keyboard.IsPressed(Key.U))
+            /*if (Keyboard.IsPressed(Key.U))
             {
                 keypressed = true;
                 delta -= analog_p0.delta * 0x200;
@@ -414,7 +414,7 @@ namespace mame
                 keypressed = true;
                 delta += analog_p0.delta * 0x200;
                 analog.lastdigital = 2;
-            }
+            }*/
             analog.accum += delta;
             if (!keypressed)
                 analog.lastdigital = 0;
@@ -426,7 +426,7 @@ namespace mame
             int value2;
             value2 = apply_analog_min_max(analog, analog.accum);
             analog.previous = analog.accum = value2;
-            if (Keyboard.IsPressed(Key.NumPad4))
+            /*if (Keyboard.IsPressed(Key.NumPad4))
             {
                 keypressed = true;
                 delta -= analog_p0.delta * 0x200;
@@ -437,7 +437,7 @@ namespace mame
                 keypressed = true;
                 delta += analog_p0.delta * 0x200;
                 analog.lastdigital = 2;
-            }
+            }*/
             analog.accum += delta;
             if (!keypressed)
                 analog.lastdigital = 0;
@@ -449,7 +449,7 @@ namespace mame
             int value2;
             value2 = apply_analog_min_max(analog, analog.accum);
             analog.previous = analog.accum = value2;
-            if (Keyboard.IsPressed(Key.A))
+            /*if (Keyboard.IsPressed(Key.A))
             {
                 keypressed = true;
                 delta -= analog_p0.delta * 0x200;
@@ -460,7 +460,7 @@ namespace mame
                 keypressed = true;
                 delta += analog_p0.delta * 0x200;
                 analog.lastdigital = 2;
-            }
+            }*/
             analog.accum += delta;
             if (!keypressed)
                 analog.lastdigital = 0;
@@ -472,7 +472,7 @@ namespace mame
             int value2;
             value2 = apply_analog_min_max(analog, analog.accum);
             analog.previous = analog.accum = value2;
-            if (Keyboard.IsPressed(Key.S))
+            /*if (Keyboard.IsPressed(Key.S))
             {
                 keypressed = true;
                 delta -= analog_p0.delta * 0x200;
@@ -483,7 +483,7 @@ namespace mame
                 keypressed = true;
                 delta += analog_p0.delta * 0x200;
                 analog.lastdigital = 2;
-            }
+            }*/
             analog.accum += delta;
             if (!keypressed)
                 analog.lastdigital = 0;
@@ -495,7 +495,7 @@ namespace mame
             int value2;
             value2 = apply_analog_min_max(analog, analog.accum);
             analog.previous = analog.accum = value2;
-            if (Keyboard.IsPressed(Key.A))
+            /*if (Keyboard.IsPressed(Key.A))
             {
                 keypressed = true;
                 delta -= analog_p0.delta * 0x200;
@@ -506,7 +506,7 @@ namespace mame
                 keypressed = true;
                 delta += analog_p0.delta * 0x200;
                 analog.lastdigital = 2;
-            }
+            }*/
             analog.accum += delta;
             if (!keypressed)
                 analog.lastdigital = 0;
@@ -518,7 +518,7 @@ namespace mame
             int value2;
             value2 = apply_analog_min_max(analog, analog.accum);
             analog.previous = analog.accum = value2;
-            if (Keyboard.IsPressed(Key.Left))
+            /*if (Keyboard.IsPressed(Key.Left))
             {
                 keypressed = true;
                 delta -= analog_p0.delta * 0x200;
@@ -529,7 +529,7 @@ namespace mame
                 keypressed = true;
                 delta += analog_p0.delta * 0x200;
                 analog.lastdigital = 2;
-            }
+            }*/
             analog.accum += delta;
             if (!keypressed)
                 analog.lastdigital = 0;

@@ -162,7 +162,7 @@ namespace mame
             }
             if (Mame.is_foreground)
             {
-                if(Keyboard.IsPressed(Key.F3))
+                /*if(Keyboard.IsPressed(Key.F3))
                 {
                     cpurun();
                     Mame.playState = Mame.PlayState.PLAY_RESET;
@@ -199,8 +199,8 @@ namespace mame
                         Mame.playState = Mame.PlayState.PLAY_REPLAYSTART;
                     }
                     return;
-                }
-                if (Keyboard.IsTriggered(Key.P))
+                }*/
+                /*if (Keyboard.IsTriggered(Key.P))
                 {
                     if (is_paused && (Keyboard.IsPressed(Key.LeftShift) || Keyboard.IsPressed(Key.RightShift)))
                     {
@@ -219,7 +219,7 @@ namespace mame
                     Keyboard.bF10 = true;
                     bool b1 = Video.global_throttle;
                     Video.global_throttle = !b1;
-                }
+                }*/
             }
         }
         public static void cpurun()

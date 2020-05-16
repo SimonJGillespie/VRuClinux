@@ -522,7 +522,7 @@ namespace mame
                                 {
                                     sx = (x + nxs * 16) & 0x1ff;
                                     sy = (y + nys * 16) & 0x1ff;
-                                    Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + (nx - 1) - nxs) & 0xf) + 0x10 * (ny - 1 - nys), col, 1, 1, sx, sy, 0x80000002);
+                                    //Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + (nx - 1) - nxs) & 0xf) + 0x10 * (ny - 1 - nys), col, 1, 1, sx, sy, 0x80000002);
                                 }
                             }
                         }
@@ -534,7 +534,7 @@ namespace mame
                                 {
                                     sx = (x + nxs * 16) & 0x1ff;
                                     sy = (y + nys * 16) & 0x1ff;
-                                    Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + nxs) & 0xf) + 0x10 * (ny - 1 - nys), col, 0, 1, sx, sy, 0x80000002);
+                                    //Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + nxs) & 0xf) + 0x10 * (ny - 1 - nys), col, 0, 1, sx, sy, 0x80000002);
                                 }
                             }
                         }
@@ -549,7 +549,7 @@ namespace mame
                                 {
                                     sx = (x + nxs * 16) & 0x1ff;
                                     sy = (y + nys * 16) & 0x1ff;
-                                    Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + (nx - 1) - nxs) & 0xf) + 0x10 * nys, col, 1, 0, sx, sy, 0x80000002);
+                                    //Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + (nx - 1) - nxs) & 0xf) + 0x10 * nys, col, 1, 0, sx, sy, 0x80000002);
                                 }
                             }
                         }
@@ -561,7 +561,7 @@ namespace mame
                                 {
                                     sx = (x + nxs * 16) & 0x1ff;
                                     sy = (y + nys * 16) & 0x1ff;
-                                    Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + nxs) & 0xf) + 0x10 * nys, col, 0, 0, sx, sy, 0x80000002);
+                                    //Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + nxs) & 0xf) + 0x10 * nys, col, 0, 0, sx, sy, 0x80000002);
                                 }
                             }
                         }
@@ -569,7 +569,7 @@ namespace mame
                 }
                 else
                 {
-                    Drawgfx.common_drawgfx_c(code, col, colour & 0x20, colour & 0x40, x & 0x1ff, y & 0x1ff, 0x80000002);
+                    //Drawgfx.common_drawgfx_c(code, col, colour & 0x20, colour & 0x40, x & 0x1ff, y & 0x1ff, 0x80000002);
                 }
                 baseoffset += baseadd;
             }
@@ -781,7 +781,7 @@ namespace mame
                                 {
                                     sx = (x + nxs * 16 + xoffs) & 0x3ff;
                                     sy = (y + nys * 16 + yoffs) & 0x3ff;
-                                    Drawgfx.common_drawgfx_c(code + (nx - 1) - nxs + 0x10 * (ny - 1 - nys), (col & 0x1f), 1, 1, sx, sy, (uint)(primasks[priority] | 0x80000000));
+                                    //Drawgfx.common_drawgfx_c(code + (nx - 1) - nxs + 0x10 * (ny - 1 - nys), (col & 0x1f), 1, 1, sx, sy, (uint)(primasks[priority] | 0x80000000));
                                     //cliprect, TRANSPARENCY_PEN, 15, priority_bitmap, primasks[priority] | 0x80000000);
                                 }
                             }
@@ -794,7 +794,7 @@ namespace mame
                                 {
                                     sx = (x + nxs * 16 + xoffs) & 0x3ff;
                                     sy = (y + nys * 16 + yoffs) & 0x3ff;
-                                    Drawgfx.common_drawgfx_c(code + nxs + 0x10 * (ny - 1 - nys), (col & 0x1f), 0, 1, sx, sy, (uint)(primasks[priority] | 0x80000000));
+                                    //Drawgfx.common_drawgfx_c(code + nxs + 0x10 * (ny - 1 - nys), (col & 0x1f), 0, 1, sx, sy, (uint)(primasks[priority] | 0x80000000));
                                     //cliprect, TRANSPARENCY_PEN, 15, priority_bitmap, primasks[priority] | 0x80000000);
                                 }
                             }
@@ -810,7 +810,7 @@ namespace mame
                                 {
                                     sx = (x + nxs * 16 + xoffs) & 0x3ff;
                                     sy = (y + nys * 16 + yoffs) & 0x3ff;
-                                    Drawgfx.common_drawgfx_c(code + (nx - 1) - nxs + 0x10 * nys, (col & 0x1f), 1, 0, sx, sy, (uint)(primasks[priority] | 0x80000000));
+                                    //Drawgfx.common_drawgfx_c(code + (nx - 1) - nxs + 0x10 * nys, (col & 0x1f), 1, 0, sx, sy, (uint)(primasks[priority] | 0x80000000));
                                     //cliprect, TRANSPARENCY_PEN, 15, priority_bitmap, primasks[priority] | 0x80000000);
                                 }
                             }
@@ -823,7 +823,7 @@ namespace mame
                                 {
                                     sx = (x + nxs * 16 + xoffs) & 0x3ff;
                                     sy = (y + nys * 16 + yoffs) & 0x3ff;
-                                    Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + nxs) & 0xf) + 0x10 * nys, (col & 0x1f), 0, 0, sx, sy, (uint)(primasks[priority] | 0x80000000));
+                                    //Drawgfx.common_drawgfx_c((code & ~0xf) + ((code + nxs) & 0xf) + 0x10 * nys, (col & 0x1f), 0, 0, sx, sy, (uint)(primasks[priority] | 0x80000000));
                                     //cliprect, TRANSPARENCY_PEN, 15, priority_bitmap, primasks[priority] | 0x80000000);
                                 }
                             }
@@ -833,7 +833,7 @@ namespace mame
                 else
                 {
                     /* Simple case... 1 sprite */
-                    Drawgfx.common_drawgfx_c(code, (col & 0x1f), colour & 0x20, colour & 0x40, (x + xoffs) & 0x3ff, (y + yoffs) & 0x3ff, (uint)(primasks[priority] | 0x80000000));
+                    //Drawgfx.common_drawgfx_c(code, (col & 0x1f), colour & 0x20, colour & 0x40, (x + xoffs) & 0x3ff, (y + yoffs) & 0x3ff, (uint)(primasks[priority] | 0x80000000));
                     //cliprect, TRANSPARENCY_PEN, 15, priority_bitmap, primasks[priority] | 0x80000000);
                 }
             }
