@@ -352,11 +352,11 @@ namespace mame
             }
             else if (address >= 0x800190 && address <= 0x800197)
             {
-                Sound.soundlatch_w((ushort)value);
+                //Sound.soundlatch_w((ushort)value);
             }
             else if (address >= 0x800198 && address <= 0x80019f)
             {
-                Sound.soundlatch2_w((ushort)value);
+                //Sound.soundlatch2_w((ushort)value);
             }
             else if (address >= 0x8001a0 && address <= 0x8001c3)
             {
@@ -397,11 +397,11 @@ namespace mame
             }
             else if (address >= 0x800190 && address + 1 <= 0x800197)
             {
-                Sound.soundlatch_w((ushort)value);
+                //Sound.soundlatch_w((ushort)value);
             }
             else if (address >= 0x800198 && address + 1 <= 0x80019f)
             {
-                Sound.soundlatch2_w((ushort)value);
+                //Sound.soundlatch2_w((ushort)value);
             }
             else if (address >= 0x8001a0 && address + 1 <= 0x8001c3)
             {
@@ -683,11 +683,11 @@ namespace mame
             }
             else if (address >= 0x800180 && address <= 0x800187)
             {
-                Sound.soundlatch_w((ushort)value);
+                //Sound.soundlatch_w((ushort)value);
             }
             else if (address >= 0x800188 && address <= 0x80018f)
             {
-                Sound.soundlatch2_w((ushort)value);
+                //Sound.soundlatch2_w((ushort)value);
             }
             else if (address >= 0x8001a2 && address <= 0x8001b3)
             {
@@ -736,11 +736,11 @@ namespace mame
             }
             else if (address >= 0x800180 && address + 1 <= 0x800187)
             {
-                Sound.soundlatch_w((ushort)value);
+                //Sound.soundlatch_w((ushort)value);
             }
             else if (address >= 0x800188 && address + 1 <= 0x80018f)
             {
-                Sound.soundlatch2_w((ushort)value);
+                //Sound.soundlatch2_w((ushort)value);
             }
             else if (address >= 0x8001a2 && address + 1 <= 0x8001b3)
             {

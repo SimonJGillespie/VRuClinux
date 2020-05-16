@@ -105,7 +105,7 @@ namespace ui
             desc1.ControlVolume = true;
             desc1.GlobalFocus = true;
             Keyboard.InitializeInput(this);
-            Sound.buf2 = new SecondaryBuffer(desc1, dev);
+            //Sound.buf2 = new SecondaryBuffer(desc1, dev);
 
             InitLoadForm();
 
@@ -164,7 +164,7 @@ namespace ui
                     itemSelect();
                     cpsToolStripMenuItem.Enabled = true;
                     CPS.CPSInit();
-                    CPS.GDIInit();
+                    //CPS.GDIInit();
                     break;
                 /*case "Neo Geo":
                     Video.nMode = 1;

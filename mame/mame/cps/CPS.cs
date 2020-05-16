@@ -69,8 +69,8 @@ namespace mame
                 case "CPS-1":
                     cps_version = 1;
                     starsrom = Machine.GetRom("stars.rom");
-                    OKI6295.okirom = Machine.GetRom("oki.rom");
-                    if (Memory.mainrom == null || gfxrom == null || Memory.audiorom == null || OKI6295.okirom == null)
+                    //OKI6295.okirom = Machine.GetRom("oki.rom");
+                    if (Memory.mainrom == null || gfxrom == null /*|| Memory.audiorom == null || OKI6295.okirom == null*/)
                     {
                         Machine.bRom = false;
                     }
@@ -81,8 +81,8 @@ namespace mame
                     qsound_sharedram2 = new byte[0x1000];
                     audioromop = Machine.GetRom("audiocpuop.rom");
                     user1rom = Machine.GetRom("user1.rom");
-                    QSound.qsoundrom = ByteToSbyte(Machine.GetRom("qsound.rom"));
-                    if (Memory.mainrom == null || audioromop == null || gfxrom == null || Memory.audiorom == null || QSound.qsoundrom == null)
+                    //QSound.qsoundrom = ByteToSbyte(Machine.GetRom("qsound.rom"));
+                    if (Memory.mainrom == null || audioromop == null || gfxrom == null || Memory.audiorom == null /*|| QSound.qsoundrom == null*/)
                     {
                         Machine.bRom = false;
                     }
@@ -105,8 +105,8 @@ namespace mame
                         mainromop = Machine.GetRom("maincpuop.rom");
                     }
                     audioromop = Machine.GetRom("audiocpu.rom");
-                    QSound.qsoundrom = ByteToSbyte(Machine.GetRom("qsound.rom"));
-                    if (Memory.mainrom == null || (Machine.sManufacturer != "bootleg" && mainromop == null) || audioromop == null || gfxrom == null || Memory.audiorom == null || QSound.qsoundrom == null)
+                    //QSound.qsoundrom = ByteToSbyte(Machine.GetRom("qsound.rom"));
+                    if (Memory.mainrom == null || (Machine.sManufacturer != "bootleg" && mainromop == null) || audioromop == null || gfxrom == null || Memory.audiorom == null /*|| QSound.qsoundrom == null*/)
                     {
                         Machine.bRom = false;
                     }
@@ -2330,7 +2330,7 @@ namespace mame
         }
         public static void cps1_oki_pin7_w(byte data)
         {
-            OKI6295.okim6295_set_pin7(data & 1);
+            //OKI6295.okim6295_set_pin7(data & 1);
         }
         public static void cps1_coinctrl_w(ushort data)
         {

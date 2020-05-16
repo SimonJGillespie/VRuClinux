@@ -38,7 +38,7 @@ namespace mame
             writer.Write(Timer.global_basetime.seconds);
             writer.Write(Timer.global_basetime.attoseconds);
             writer.Write(Video.screenstate.frame_number);
-            writer.Write(Sound.last_update_second);
+            //writer.Write(Sound.last_update_second);
             for (i = 0; i < 2; i++)
             {
                 writer.Write(Cpuexec.cpu[i].suspend);
@@ -49,22 +49,22 @@ namespace mame
                 writer.Write(Cpuexec.cpu[i].localtime.attoseconds);
             }
             Timer.SaveStateBinary(writer);
-            YM2151.SaveStateBinary(writer);
-            OKI6295.SaveStateBinary(writer);
+            //YM2151.SaveStateBinary(writer);
+            //OKI6295.SaveStateBinary(writer);
             for (i = 0; i < 2; i++)
             {
-                writer.Write(Sound.latched_value[i]);
+                //writer.Write(Sound.latched_value[i]);
             }
             for (i = 0; i < 2; i++)
             {
-                writer.Write(Sound.utempdata[i]);
+                //writer.Write(Sound.utempdata[i]);
             }
-            writer.Write(Sound.ym2151stream.output_sampindex);
-            writer.Write(Sound.ym2151stream.output_base_sampindex);
-            writer.Write(Sound.okistream.output_sampindex);
-            writer.Write(Sound.okistream.output_base_sampindex);
-            writer.Write(Sound.mixerstream.output_sampindex);
-            writer.Write(Sound.mixerstream.output_base_sampindex);
+            //writer.Write(Sound.ym2151stream.output_sampindex);
+            //writer.Write(Sound.ym2151stream.output_base_sampindex);
+            //writer.Write(Sound.okistream.output_sampindex);
+            //writer.Write(Sound.okistream.output_base_sampindex);
+            //writer.Write(Sound.mixerstream.output_sampindex);
+            //writer.Write(Sound.mixerstream.output_base_sampindex);
             switch (RomInfo.Rom.Name)
             {
                 case "forgottn":
@@ -108,7 +108,7 @@ namespace mame
             writer.Write(Timer.global_basetime.seconds);
             writer.Write(Timer.global_basetime.attoseconds);
             writer.Write(Video.screenstate.frame_number);
-            writer.Write(Sound.last_update_second);
+            //writer.Write(Sound.last_update_second);
             for (i = 0; i < 2; i++)
             {
                 writer.Write(Cpuexec.cpu[i].suspend);
@@ -121,11 +121,11 @@ namespace mame
             Timer.SaveStateBinary(writer);
             writer.Write(qsound_sharedram1);
             writer.Write(qsound_sharedram2);
-            QSound.SaveStateBinary(writer);
-            writer.Write(Sound.qsoundstream.output_sampindex);
-            writer.Write(Sound.qsoundstream.output_base_sampindex);
-            writer.Write(Sound.mixerstream.output_sampindex);
-            writer.Write(Sound.mixerstream.output_base_sampindex);
+            //QSound.SaveStateBinary(writer);
+            //writer.Write(Sound.qsoundstream.output_sampindex);
+            //writer.Write(Sound.qsoundstream.output_base_sampindex);
+            //writer.Write(Sound.mixerstream.output_sampindex);
+            //writer.Write(Sound.mixerstream.output_base_sampindex);
             writer.Write(Eeprom.eeprom_data);
             writer.Write(Eeprom.serial_buffer);
             writer.Write((int)Eeprom.clock_line);
@@ -179,7 +179,7 @@ namespace mame
             writer.Write(Timer.global_basetime.seconds);
             writer.Write(Timer.global_basetime.attoseconds);
             writer.Write(Video.screenstate.frame_number);
-            writer.Write(Sound.last_update_second);
+            //writer.Write(Sound.last_update_second);
             for (i = 0; i < 2; i++)
             {
                 writer.Write(Cpuexec.cpu[i].suspend);
@@ -192,11 +192,11 @@ namespace mame
             Timer.SaveStateBinary(writer);
             writer.Write(qsound_sharedram1);
             writer.Write(qsound_sharedram2);
-            QSound.SaveStateBinary(writer);
-            writer.Write(Sound.qsoundstream.output_sampindex);
-            writer.Write(Sound.qsoundstream.output_base_sampindex);
-            writer.Write(Sound.mixerstream.output_sampindex);
-            writer.Write(Sound.mixerstream.output_base_sampindex);
+            //QSound.SaveStateBinary(writer);
+            //writer.Write(Sound.qsoundstream.output_sampindex);
+            //writer.Write(Sound.qsoundstream.output_base_sampindex);
+            //writer.Write(Sound.mixerstream.output_sampindex);
+           // writer.Write(Sound.mixerstream.output_base_sampindex);
             writer.Write(Eeprom.eeprom_data);
             writer.Write(Eeprom.serial_buffer);
             writer.Write((int)Eeprom.clock_line);
@@ -235,7 +235,7 @@ namespace mame
             Timer.global_basetime.seconds = reader.ReadInt32();
             Timer.global_basetime.attoseconds = reader.ReadInt64();
             Video.screenstate.frame_number = reader.ReadInt64();
-            Sound.last_update_second = reader.ReadInt32();
+            //Sound.last_update_second = reader.ReadInt32();
             for (i = 0; i < 2; i++)
             {
                 Cpuexec.cpu[i].suspend = reader.ReadByte();
@@ -246,22 +246,22 @@ namespace mame
                 Cpuexec.cpu[i].localtime.attoseconds = reader.ReadInt64();
             }
             Timer.LoadStateBinary(reader);
-            YM2151.LoadStateBinary(reader);
-            OKI6295.LoadStateBinary(reader);
+            //YM2151.LoadStateBinary(reader);
+            //OKI6295.LoadStateBinary(reader);
             for (i = 0; i < 2; i++)
             {
-                Sound.latched_value[i] = reader.ReadUInt16();
+                //Sound.latched_value[i] = reader.ReadUInt16();
             }
             for (i = 0; i < 2; i++)
             {
-                Sound.utempdata[i] = reader.ReadUInt16();
+                //Sound.utempdata[i] = reader.ReadUInt16();
             }
-            Sound.ym2151stream.output_sampindex = reader.ReadInt32();
-            Sound.ym2151stream.output_base_sampindex = reader.ReadInt32();
-            Sound.okistream.output_sampindex = reader.ReadInt32();
-            Sound.okistream.output_base_sampindex = reader.ReadInt32();
-            Sound.mixerstream.output_sampindex = reader.ReadInt32();
-            Sound.mixerstream.output_base_sampindex = reader.ReadInt32();
+            //Sound.ym2151stream.output_sampindex = reader.ReadInt32();
+            //Sound.ym2151stream.output_base_sampindex = reader.ReadInt32();
+            //Sound.okistream.output_sampindex = reader.ReadInt32();
+            //Sound.okistream.output_base_sampindex = reader.ReadInt32();
+            //Sound.mixerstream.output_sampindex = reader.ReadInt32();
+            //Sound.mixerstream.output_base_sampindex = reader.ReadInt32();
             switch (RomInfo.Rom.Name)
             {
                 case "forgottn":
@@ -305,7 +305,7 @@ namespace mame
             Timer.global_basetime.seconds = reader.ReadInt32();
             Timer.global_basetime.attoseconds = reader.ReadInt64();
             Video.screenstate.frame_number = reader.ReadInt64();
-            Sound.last_update_second = reader.ReadInt32();
+            //Sound.last_update_second = reader.ReadInt32();
             for (i = 0; i < 2; i++)
             {
                 Cpuexec.cpu[i].suspend = reader.ReadByte();
@@ -318,11 +318,11 @@ namespace mame
             Timer.LoadStateBinary(reader);
             qsound_sharedram1 = reader.ReadBytes(0x1000);
             qsound_sharedram2 = reader.ReadBytes(0x1000);
-            QSound.LoadStateBinary(reader);
-            Sound.qsoundstream.output_sampindex = reader.ReadInt32();
-            Sound.qsoundstream.output_base_sampindex = reader.ReadInt32();
-            Sound.mixerstream.output_sampindex = reader.ReadInt32();
-            Sound.mixerstream.output_base_sampindex = reader.ReadInt32();
+            //QSound.LoadStateBinary(reader);
+            //Sound.qsoundstream.output_sampindex = reader.ReadInt32();
+            //Sound.qsoundstream.output_base_sampindex = reader.ReadInt32();
+            //Sound.mixerstream.output_sampindex = reader.ReadInt32();
+            //Sound.mixerstream.output_base_sampindex = reader.ReadInt32();
             Eeprom.eeprom_data = reader.ReadBytes(0x80);
             Eeprom.serial_buffer = reader.ReadBytes(40);
             Eeprom.clock_line = (LineState)reader.ReadInt32();
@@ -376,7 +376,7 @@ namespace mame
             Timer.global_basetime.seconds = reader.ReadInt32();
             Timer.global_basetime.attoseconds = reader.ReadInt64();
             Video.screenstate.frame_number = reader.ReadInt64();
-            Sound.last_update_second = reader.ReadInt32();
+            //Sound.last_update_second = reader.ReadInt32();
             for (i = 0; i < 2; i++)
             {
                 Cpuexec.cpu[i].suspend = reader.ReadByte();
@@ -389,11 +389,11 @@ namespace mame
             Timer.LoadStateBinary(reader);
             qsound_sharedram1 = reader.ReadBytes(0x1000);
             qsound_sharedram2 = reader.ReadBytes(0x1000);
-            QSound.LoadStateBinary(reader);
-            Sound.qsoundstream.output_sampindex = reader.ReadInt32();
-            Sound.qsoundstream.output_base_sampindex = reader.ReadInt32();
-            Sound.mixerstream.output_sampindex = reader.ReadInt32();
-            Sound.mixerstream.output_base_sampindex = reader.ReadInt32();
+            //QSound.LoadStateBinary(reader);
+            //Sound.qsoundstream.output_sampindex = reader.ReadInt32();
+           // Sound.qsoundstream.output_base_sampindex = reader.ReadInt32();
+            //Sound.mixerstream.output_sampindex = reader.ReadInt32();
+           // Sound.mixerstream.output_base_sampindex = reader.ReadInt32();
             Eeprom.eeprom_data = reader.ReadBytes(0x80);
             Eeprom.serial_buffer = reader.ReadBytes(40);
             Eeprom.clock_line = (LineState)reader.ReadInt32();

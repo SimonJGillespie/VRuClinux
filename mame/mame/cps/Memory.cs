@@ -328,11 +328,11 @@ namespace mame
             }
             else if (address >= 0x800180 && address <= 0x800187)
             {
-                Sound.soundlatch_w((ushort)value);
+                //Sound.soundlatch_w((ushort)value);
             }
             else if (address >= 0x800188 && address <= 0x80018f)
             {
-                Sound.soundlatch2_w((ushort)value);
+                //Sound.soundlatch2_w((ushort)value);
             }
             else if (address >= 0x900000 && address <= 0x92ffff)
             {
@@ -395,11 +395,11 @@ namespace mame
             }
             else if (address >= 0x800180 && address + 1 <= 0x800187)
             {
-                Sound.soundlatch_w((ushort)value);
+                //Sound.soundlatch_w((ushort)value);
             }
             else if (address >= 0x800188 && address + 1 <= 0x80018f)
             {
-                Sound.soundlatch2_w((ushort)value);
+                //Sound.soundlatch2_w((ushort)value);
             }
             else if (address >= 0x900000 && address + 1 <= 0x92ffff)
             {
@@ -549,19 +549,19 @@ namespace mame
             }
             else if (address == 0xf001)
             {
-                result = YM2151.ym2151_status_port_0_r();
+                //result = YM2151.ym2151_status_port_0_r();
             }
             else if (address == 0xf002)
             {
-                result = OKI6295.okim6295_status_0_r();
+                //result = OKI6295.okim6295_status_0_r();
             }
             else if (address == 0xf008)
             {
-                result = (byte)Sound.soundlatch_r();
+                //result = (byte)Sound.soundlatch_r();
             }
             else if (address == 0xf00a)
             {
-                result = (byte)Sound.soundlatch2_r();
+                //result = (byte)Sound.soundlatch2_r();
             }
             else
             {
@@ -577,15 +577,15 @@ namespace mame
             }
             else if (address == 0xf000)
             {
-                YM2151.ym2151_register_port_0_w(value);
+                //YM2151.ym2151_register_port_0_w(value);
             }
             else if (address == 0xf001)
             {
-                YM2151.ym2151_data_port_0_w(value);
+                //YM2151.ym2151_data_port_0_w(value);
             }
             else if (address == 0xf002)
             {
-                OKI6295.okim6295_data_0_w(value);
+                //OKI6295.okim6295_data_0_w(value);
             }
             else if (address == 0xf004)
             {
@@ -1954,7 +1954,7 @@ namespace mame
             }
             else if (address == 0xd007)
             {
-                result = QSound.qsound_status_r();
+                //result = QSound.qsound_status_r();
             }
             else if (address >= 0xf000 && address <= 0xffff)
             {
@@ -1974,15 +1974,15 @@ namespace mame
             }
             else if (address == 0xd000)
             {
-                QSound.qsound_data_h_w(value);
+                //QSound.qsound_data_h_w(value);
             }
             else if (address == 0xd001)
             {
-                QSound.qsound_data_l_w(value);
+                //QSound.qsound_data_l_w(value);
             }
             else if (address == 0xd002)
             {
-                QSound.qsound_cmd_w(value);
+                //QSound.qsound_cmd_w(value);
             }
             else if (address == 0xd003)
             {

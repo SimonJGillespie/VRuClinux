@@ -107,7 +107,7 @@ namespace mame
             Watchdog.watchdog_init();
             Cpuint.cpuint_init();
             Video.video_init();
-            Sound.sound_init();
+            //Sound.sound_init();
             State.state_init();            
             Machine.machine_start();
         }
@@ -116,7 +116,7 @@ namespace mame
             if (paused == pause)
                 return;
             paused = pause;
-            Sound.sound_pause(paused);
+            //Sound.sound_pause(paused);
         }
         public static bool mame_is_paused()
         {
@@ -129,7 +129,7 @@ namespace mame
             Machine.machine_reset_callback();
             Cpuexec.cpuexec_reset();
             Watchdog.watchdog_internal_reset();
-            Sound.sound_reset();            
+            //Sound.sound_reset();            
             playState = PlayState.PLAY_RUNNING;
             Timer.timer_set_global_time(Timer.get_current_time());
         }
@@ -408,7 +408,7 @@ namespace mame
                     {
                         CPS.ttmap[i].all_tiles_dirty = true;
                     }
-                    YM2151.ym2151_postload();
+                    //YM2151.ym2151_postload();
                     break;
                 case "CPS-1(QSound)":
                 case "CPS2":
