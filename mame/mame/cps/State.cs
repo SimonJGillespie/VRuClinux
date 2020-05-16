@@ -76,7 +76,7 @@ namespace mame
                 case "forgottnuaa":
                 case "lostwrld":
                 case "lostwrldo":
-                    writer.Write(Inptport.portdata.last_delta_nsec);
+                    //writer.Write(Inptport.portdata.last_delta_nsec);
                     break;
             }
         }
@@ -273,7 +273,7 @@ namespace mame
                 case "forgottnuaa":
                 case "lostwrld":
                 case "lostwrldo":
-                    Inptport.portdata.last_delta_nsec = reader.ReadInt64();
+                    //Inptport.portdata.last_delta_nsec = reader.ReadInt64();
                     break;
             }
         }

@@ -1199,7 +1199,7 @@ namespace mame
         }
         public static void replay_portC()
         {
-            if (Inptport.bReplayRead)
+            /*if (Inptport.bReplayRead)
             {
                 try
                 {
@@ -1214,24 +1214,24 @@ namespace mame
                     Mame.playState = Mame.PlayState.PLAY_REPLAYEND;
                     //Mame.mame_pause(true);
                 }
-                Inptport.bReplayRead = false;
-            }
+                //Inptport.bReplayRead = false;
+            }*/
             if (Video.screenstate.frame_number == Video.frame_number_obj)
             {
                 sbyte0 = sbyte0_old;
                 short1 = short1_old;
                 short2 = short2_old;
                 sbyte3 = sbyte3_old;
-                Inptport.bReplayRead = true;
+                //Inptport.bReplayRead = true;
             }
             else
             {
-                Inptport.bReplayRead = false;
+                //Inptport.bReplayRead = false;
             }
         }
         public static void replay_portC2()
         {
-            if (Inptport.bReplayRead)
+            /*if (Inptport.bReplayRead)
             {
                 try
                 {
@@ -1246,17 +1246,17 @@ namespace mame
                     //Mame.mame_pause(true);
                 }
                 Inptport.bReplayRead = false;
-            }
+            }*/
             if (Attotime.attotime_compare(Timer.global_basetime, Timer.global_basetime_obj) == 0)
             {
                 short0 = short0_old;
                 short1 = short1_old;
                 short2 = short2_old;
-                Inptport.bReplayRead = true;
+                //Inptport.bReplayRead = true;
             }
             else
             {
-                Inptport.bReplayRead = false;
+                //Inptport.bReplayRead = false;
             }
         }
     }

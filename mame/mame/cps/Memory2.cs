@@ -15,12 +15,12 @@ namespace mame
             if (address >= 0x800052 && address <= 0x800055)
             {
                 int offset=(address-0x800052)/2;
-                result = (sbyte)((Inptport.input_port_read_direct(Inptport.analog_p0) - dial0) >> (8 * offset));
+                //result = (sbyte)((Inptport.input_port_read_direct(Inptport.analog_p0) - dial0) >> (8 * offset));
             }
             else if (address >= 0x80005a && address <= 0x80005d)
             {
                 int offset = (address - 0x80005a) / 2;
-                result = (sbyte)((Inptport.input_port_read_direct(Inptport.analog_p1) - dial1) >> (8 * offset));
+                //result = (sbyte)((Inptport.input_port_read_direct(Inptport.analog_p1) - dial1) >> (8 * offset));
             }
             else
             {
@@ -35,12 +35,12 @@ namespace mame
             if (address >= 0x800052 && address <= 0x800055)
             {
                 int offset = (address - 0x800052) / 2;
-                result = (short)(((Inptport.input_port_read_direct(Inptport.analog_p0) - dial0) >> (8 * offset)) & 0xff);
+                //result = (short)(((Inptport.input_port_read_direct(Inptport.analog_p0) - dial0) >> (8 * offset)) & 0xff);
             }
             else if (address >= 0x80005a && address <= 0x80005d)
             {
                 int offset = (address - 0x80005a) / 2;
-                result = (short)(((Inptport.input_port_read_direct(Inptport.analog_p1) - dial1) >> (8 * offset)) & 0xff);
+                //result = (short)(((Inptport.input_port_read_direct(Inptport.analog_p1) - dial1) >> (8 * offset)) & 0xff);
             }
             else
             {
@@ -54,11 +54,11 @@ namespace mame
             int result = 0;
             if (address >= 0x800052 && address + 3 <= 0x800055)
             {
-                result = (int)(((Inptport.input_port_read_direct(Inptport.analog_p0) - dial0) & 0xff) * 0x10000 + (((Inptport.input_port_read_direct(Inptport.analog_p0) - dial0) >> 8) & 0xff));
+                //result = (int)(((Inptport.input_port_read_direct(Inptport.analog_p0) - dial0) & 0xff) * 0x10000 + (((Inptport.input_port_read_direct(Inptport.analog_p0) - dial0) >> 8) & 0xff));
             }
             else if (address >= 0x80005a && address + 3 <= 0x80005d)
             {
-                result = (int)(((Inptport.input_port_read_direct(Inptport.analog_p1) - dial1) & 0xff) * 0x10000 + (((Inptport.input_port_read_direct(Inptport.analog_p1) - dial1) >> 8) & 0xff));
+                //result = (int)(((Inptport.input_port_read_direct(Inptport.analog_p1) - dial1) & 0xff) * 0x10000 + (((Inptport.input_port_read_direct(Inptport.analog_p1) - dial1) >> 8) & 0xff));
             }
             else
             {
@@ -71,11 +71,11 @@ namespace mame
             address &= 0xffffff;
             if (address >= 0x800040 && address <= 0x800041)
             {
-                dial0 = (int)Inptport.input_port_read_direct(Inptport.analog_p0);
+                //dial0 = (int)Inptport.input_port_read_direct(Inptport.analog_p0);
             }
             else if (address >= 0x800048 && address <= 0x800049)
             {
-                dial1 = (int)Inptport.input_port_read_direct(Inptport.analog_p1);
+                //dial1 = (int)Inptport.input_port_read_direct(Inptport.analog_p1);
             }
             else
             {
@@ -87,11 +87,11 @@ namespace mame
             address &= 0xffffff;
             if (address >= 0x800040 && address <= 0x800041)
             {
-                dial0 = (int)Inptport.input_port_read_direct(Inptport.analog_p0);
+                //dial0 = (int)Inptport.input_port_read_direct(Inptport.analog_p0);
             }
             else if (address >= 0x800048 && address <= 0x800049)
             {
-                dial1 = (int)Inptport.input_port_read_direct(Inptport.analog_p1);
+                //dial1 = (int)Inptport.input_port_read_direct(Inptport.analog_p1);
             }
             else
             {

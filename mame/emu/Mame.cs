@@ -102,7 +102,7 @@ namespace mame
             Generic.generic_machine_init();
             Timer.timer_init();
             soft_reset_timer = Timer.timer_alloc_common(soft_reset, "soft_reset", false);
-            Inptport.input_port_init();
+            //Inptport.input_port_init();
             Cpuexec.cpuexec_init();
             Watchdog.watchdog_init();
             Cpuint.cpuint_init();
