@@ -11,7 +11,7 @@ namespace mame
     {
         public static string sName, sParent, sBoard, sDirection, sDescription, sManufacturer;
         public static List<string> lsParents;
-        public static mainForm FORM;
+        //public static mainForm FORM;
         public static RomInfo rom;
         public static bool bRom;
         public delegate void machine_delegate();
