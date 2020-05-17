@@ -21,7 +21,7 @@ namespace ui
     public partial class mainForm : Form
     {
         private ToolStripMenuItem[] itemSize;
-        private loadForm loadform;
+        //private loadForm loadform;
         //public cheatForm cheatform;
         //private cheatsearchForm cheatsearchform;
         //private ipsForm ipsform;        
@@ -68,7 +68,7 @@ namespace ui
                 Mame.exit_pending = true;
                 Thread.Sleep(100);
                 //RomInfo.Rom = RomInfo.GetRomByName(listView1.SelectedItems[0].SubItems[2].Text);
-                RomInfo.Rom = RomInfo.GetRomByName("ffightu");
+            //  RomInfo.Rom = RomInfo.GetRomByName("ffightu");
                 this.LoadRom();
                 if (Machine.bRom)
                 {
@@ -107,9 +107,9 @@ namespace ui
             //Keyboard.InitializeInput(this);
             //Sound.buf2 = new SecondaryBuffer(desc1, dev);
 
-            InitLoadForm();
+           //InitLoadForm();
             RomInfo.Rom.Name="ffightu";
-            RomInfo.Rom.Board = "CPS1";
+            RomInfo.Rom.Board = "CPS-1";
             RomInfo.Rom.Parent="ffight";
             RomInfo.Rom.Direction="";
             RomInfo.Rom.Description="";
@@ -141,7 +141,10 @@ namespace ui
             Machine.sDirection = Machine.rom.Direction;
             Machine.sDescription = Machine.rom.Description;
             Machine.sManufacturer = Machine.rom.Manufacturer;
-            Machine.lsParents = RomInfo.GetParents(Machine.sName);
+            Machine.bRom = true;
+            //Machine.lsParents = RomInfo.GetParents(Machine.sName);
+            Machine.lsParents = new List<String>();
+            Machine.lsParents.Add("ffight");
             int i;
             cpsToolStripMenuItem.Enabled = false;
             neogeoToolStripMenuItem.Enabled = false;
@@ -383,36 +386,36 @@ namespace ui
         }*/
         private void InitLoadForm()
         {
-            loadform = new loadForm(this);
+            //loadform = new loadForm(this);
            ColumnHeader columnheader;
             columnheader = new ColumnHeader();
             columnheader.Text = "Title";
             columnheader.Width = 350;
-            loadform.listView1.Columns.Add(columnheader);
+           // loadform.listView1.Columns.Add(columnheader);
             columnheader = new ColumnHeader();
             columnheader.Text = "Year";
             columnheader.Width = 60;
-            loadform.listView1.Columns.Add(columnheader);
+          //  loadform.listView1.Columns.Add(columnheader);
             columnheader = new ColumnHeader();
             columnheader.Text = "ROM";
             columnheader.Width = 90;
-            loadform.listView1.Columns.Add(columnheader);
+          //  loadform.listView1.Columns.Add(columnheader);
             columnheader = new ColumnHeader();
             columnheader.Text = "Parent";
             columnheader.Width = 60;
-            loadform.listView1.Columns.Add(columnheader);
+//loadform.listView1.Columns.Add(columnheader);
             columnheader = new ColumnHeader();
             columnheader.Text = "Direction";
             columnheader.Width = 70;
-            loadform.listView1.Columns.Add(columnheader);
+    //        loadform.listView1.Columns.Add(columnheader);
             columnheader = new ColumnHeader();
             columnheader.Text = "Manufacturer";
             columnheader.Width = 120;
-            loadform.listView1.Columns.Add(columnheader);
+       //     loadform.listView1.Columns.Add(columnheader);
             columnheader = new ColumnHeader();
             columnheader.Text = "Board";
             columnheader.Width = 120;
-            loadform.listView1.Columns.Add(columnheader);
+         //   loadform.listView1.Columns.Add(columnheader);
             XElement xe = XElement.Parse(mame.Properties.Resources.mame);
             IEnumerable<XElement> elements = from ele in xe.Elements("game") select ele;
             showInfoByElements(elements);
@@ -433,7 +436,7 @@ namespace ui
                 rom.Year = ele.Element("year").Value;
                 rom.Manufacturer = ele.Element("manufacturer").Value;
                 RomInfo.romList.Add(rom);
-                loadform.listView1.Items.Add(new ListViewItem(new string[] { rom.Description, rom.Year, rom.Name, rom.Parent, rom.Direction, rom.Manufacturer, rom.Board }));
+                //loadform.listView1.Items.Add(new ListViewItem(new string[] { rom.Description, rom.Year, rom.Name, rom.Parent, rom.Direction, rom.Manufacturer, rom.Board }));
                 //sw1.WriteLine(rom.Name + "\t" + rom.Board + "\t" + rom.Parent + "\t" + rom.Direction + "\t" + rom.Description + "\t" + rom.Year + "\t" + rom.Manufacturer);
             }
             //sw1.Close();
@@ -505,7 +508,7 @@ namespace ui
             //pState = PlayState.PLAY_STOPPED;
             //OnPlaying(pState);
             //OnRunning(false);
-            foreach (ListViewItem lvi in loadform.listView1.Items)
+           /* foreach (ListViewItem lvi in loadform.listView1.Items)
             {
                 if (sSelect == lvi.SubItems[2].Text)
                 {
@@ -516,7 +519,7 @@ namespace ui
                 }
             }
             //StopTimer();
-            loadform.ShowDialog();
+            loadform.ShowDialog();*/
         }
         private void resetToolStripMenuItem_Click(object sender, EventArgs e)
         {
