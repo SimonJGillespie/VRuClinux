@@ -37,47 +37,14 @@ namespace ui
             InitializeComponent();
         }
 
-        public void ApplyRom()
-        {
-
-                this.Close();
-                Mame.exit_pending = true;
-                Thread.Sleep(100);
-
-                this.LoadRom();
-                if (Machine.bRom)
-                {
-
-                    Mame.exit_pending = false;
-                    this.resetToolStripMenuItem.Enabled = true;
-
-                    mainForm.t1 = new Thread(Mame.mame_execute);
-                    mainForm.t1.Start();
-                }
-
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            StreamReader sr1 = new StreamReader("mame.ini");
-            sr1.ReadLine();
-            sSelect = sr1.ReadLine();
-            sr1.Close();
-            this.Text = Version.build_version;
-            resetToolStripMenuItem.Enabled = false;
-            gameStripMenuItem.Enabled = false;
-            Mame.sHandle1 = this.Handle.ToString();
-            RomInfo.Rom=new RomInfo();
-            RomInfo.Rom.Name="ffightu";
-            RomInfo.Rom.Board = "CPS-1";
-            RomInfo.Rom.Parent="ffight";
-            RomInfo.Rom.Direction="";
-            RomInfo.Rom.Description="";
-            RomInfo.Rom.Manufacturer="CapCom";
-
-            ApplyRom();
-        }
         public void LoadRom()
         {
+
+
+            this.Close();
+            Mame.exit_pending = true;
+            Thread.Sleep(100);
+
             mame.Timer.lt = new List<mame.Timer.emu_timer>();
             sSelect = RomInfo.Rom.Name;
             Machine.FORM = this;
@@ -115,16 +82,16 @@ namespace ui
                     itemSize[1].Text = "512x256";
                     itemSize[2].Text = "384x224";
                     resetToolStripMenuItem.DropDownItems.Clear();
-                    resetToolStripMenuItem.DropDownItems.AddRange(itemSize);                    
+                    resetToolStripMenuItem.DropDownItems.AddRange(itemSize);
                     itemSelect();
                     cpsToolStripMenuItem.Enabled = true;
                     CPS.CPSInit();
                     //CPS.GDIInit();
                     break;
- 
+
             }
             if (Machine.bRom)
-            {                
+            {
                 this.Text = "MAME.NET: " + Machine.sDescription + " [" + Machine.sName + "]";
                 Mame.init_machine();
                 Generic.nvram_load();
@@ -133,7 +100,38 @@ namespace ui
             {
                 MessageBox.Show("error rom");
             }
+            if (Machine.bRom)
+            {
+
+                Mame.exit_pending = false;
+                this.resetToolStripMenuItem.Enabled = true;
+
+                mainForm.t1 = new Thread(Mame.mame_execute);
+                mainForm.t1.Start();
+            }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            StreamReader sr1 = new StreamReader("mame.ini");
+            sr1.ReadLine();
+            sSelect = sr1.ReadLine();
+            sr1.Close();
+            this.Text = Version.build_version;
+            resetToolStripMenuItem.Enabled = false;
+            gameStripMenuItem.Enabled = false;
+            Mame.sHandle1 = this.Handle.ToString();
+            RomInfo.Rom=new RomInfo();
+            RomInfo.Rom.Name="ffightu";
+            RomInfo.Rom.Board = "CPS-1";
+            RomInfo.Rom.Parent="ffight";
+            RomInfo.Rom.Direction="";
+            RomInfo.Rom.Description="";
+            RomInfo.Rom.Manufacturer="CapCom";
+
+            LoadRom();
+        }
+
         public void HandleMouse()
         {
             switch (Machine.sName)

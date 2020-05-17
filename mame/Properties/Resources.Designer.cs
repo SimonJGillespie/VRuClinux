@@ -95,17 +95,5 @@ namespace mame.Properties {
                 return ResourceManager.GetString("mame", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Detail: https://www.codeproject.com/Articles/1275365/MAME-NET
-        ///You should install Microsoft .NET Framework 3.5 or higher before running the program. You should download MAME.NET ROM files in roms directory.
-        ///Hotkey: F3 -- soft reset, F7 -- load state, Shift+F7 -- save state, F8 -- replay input, Shift+F8 -- record input (start and stop), 0-9 and A-Z after state related hotkey -- handle certain files, F10 -- toggle global throttle, P -- pause and continue, shift+P -- skip a frame.
-        ///Control key: 1 -- P1 start, [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string readme {
-            get {
-                return ResourceManager.GetString("readme", resourceCulture);
-            }
-        }
     }
 }
