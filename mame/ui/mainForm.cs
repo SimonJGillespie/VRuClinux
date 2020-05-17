@@ -1,42 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-//using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Threading;
 using System.Xml.Linq;
 using System.Runtime.InteropServices;
-//using Microsoft.DirectX.DirectSound;
-//using DSDevice = Microsoft.DirectX.DirectSound.Device;
 using mame;
-//using cpu.nec;
 
 namespace ui
 {
     public partial class mainForm : Form
     {
         private ToolStripMenuItem[] itemSize;
-        //private loadForm loadform;
-        //public cheatForm cheatform;
-        //private cheatsearchForm cheatsearchform;
-        //private ipsForm ipsform;        
-    //    public m68000Form m68000form;
-       // public z80Form z80form;
-        //public m6809Form m6809form;
-        //public cpsForm cpsform;
-        //public neogeoForm neogeoform;
-        //public namcos1Form namcos1form;
-        //public pgmForm pgmform;
-        //public m72Form m72form;
-        //public m92Form m92form;
         public string sSelect;
-        //private DSDevice dev;
-       // private BufferDescription desc1;
         public static Thread t1;
         public string handle1;
         [DllImport("user32.dll", EntryPoint = "ShowCursor", CharSet = CharSet.Auto)]
@@ -196,10 +173,10 @@ namespace ui
             }
 
         }
-        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        /*private void resetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ResetPicturebox();
-        }
+        }*/
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -252,31 +229,14 @@ namespace ui
         {
             //m6809form.Show();
         }
-        public void ResetPicturebox()
-        {
-            pictureBox1.Dispose();
-            pictureBox1 = null;
-            pictureBox1 = new PictureBox();
-            pictureBox1.Location = new System.Drawing.Point(12, 37);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(Video.fullwidth, Video.fullheight);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            Controls.Add(this.pictureBox1);
-            ResizeMain();
-        }
+
         protected override void WndProc(ref Message msg)
         {
             if (msg.Msg == 0x0112)
             {
                 if (msg.WParam.ToString("X4") == "F100")
                 {
-                    /*if (Keyboard.bF10)
-                    {
-                        Keyboard.bF10 = false;
-                        return;
-                    }*/
+  
                 }
             }
             // Pass message to default handler.
@@ -360,60 +320,7 @@ namespace ui
                         Video.height = 224;
                     }
                     break;
-                case "Neo Geo":
-                    if (Video.iMode == 0)
-                    {
-                        Video.offsetx = 30;
-                        Video.offsety = 16;
-                        Video.width = 320;
-                        Video.height = 224;
-                    }
-                    break;
-                case "Namco System 1":
-                    if (Video.iMode == 0)
-                    {
-                        Video.offsetx = 73;
-                        Video.offsety = 16;
-                        Video.width = 288;
-                        Video.height = 224;
-                    }
-                    break;
-                case "IGS011":
-                    if (Video.iMode == 0)
-                    {
-                        Video.offsetx = 0;
-                        Video.offsety = 0;
-                        Video.width = 512;
-                        Video.height = 240;
-                    }
-                    break;
-                case "PGM":
-                    if (Video.iMode == 0)
-                    {
-                        Video.offsetx = 0;
-                        Video.offsety = 0;
-                        Video.width = 448;
-                        Video.height = 224;
-                    }
-                    break;
-                case "M72":
-                    if (Video.iMode == 0)
-                    {
-                        Video.offsetx = 64;
-                        Video.offsety = 0;
-                        Video.width = 384;
-                        Video.height = 256;
-                    }
-                    break;
-                case "M92":
-                    if (Video.iMode == 0)
-                    {
-                        Video.offsetx = 80;
-                        Video.offsety = 8;
-                        Video.width = 320;
-                        Video.height = 240;
-                    }
-                    break;
+
             }
             switch (Machine.sDirection)
             {
